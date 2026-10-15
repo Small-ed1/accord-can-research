@@ -69,8 +69,10 @@
     "png_metadata": {},
     "source": "Native SVG design rendered locally. The only payload is the documented synthetic decoder example, not captured vehicle data.",
     "image_exclusion": "Only the exact generated PNG path is allowlisted. Raw vehicle images and recordings remain excluded.",
-    "announcement_scope": "Drafts request independent validation, retain sample and license limits, and ask for anonymous summaries. No external forum submission is recorded by these files.",
+    "announcement_scope": "The initial r/CarHacking announcement requests independent validation, retains sample and license limits, and asks for anonymous summaries. Only the generated synthetic graphic was attached.",
     "current_tracked_publication_files": 90,
-    "research_definitions_changed": false
+    "research_definitions_changed": false,
+    "public_announcement_url": "https://www.reddit.com/r/CarHacking/comments/1x6ga82/2003_and_2007_honda_accord_fcan_research_and_dbcs/",
+    "social_preview_setting": "Installed and verified in GitHub settings and through usesCustomOpenGraphImage=true."
   }
 }

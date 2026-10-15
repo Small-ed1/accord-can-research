@@ -2,6 +2,8 @@
 
 Introduce the observed 2003 and 2007 four-cylinder automatic profiles to people who can use the findings or independently check them. Link the repository and one relevant example, then ask for a specific confirmation or counterexample. These are research profiles from two vehicles, with no reuse license applied.
 
+The initial technical announcement was [published in r/CarHacking](https://www.reddit.com/r/CarHacking/comments/1x6ga82/2003_and_2007_honda_accord_fcan_research_and_dbcs/) on 15 October 2026 with the Original Project flair and the synthetic overview graphic. The versions below remain available for future use where appropriate; avoid reposting the unchanged announcement.
+
 ## Technical community announcement draft
 
 **Suggested title:** 2003 and 2007 Honda Accord F-CAN research and DBCs, looking for independent validation
@@ -45,13 +47,13 @@ The [r/CarHacking rules](https://www.reddit.com/r/CarHacking/) were checked on 1
 
 ## Social preview image
 
-The [PNG card](assets/social-preview.png) is 1280 × 640 pixels and under 1 MB. The [editable SVG](assets/accord-can-overview.svg) also appears in the README. It uses a synthetic frame, contains no vehicle photography, and can be rendered with:
+The [PNG card](assets/social-preview.png) is installed as the repository's custom social preview. It is 1280 × 640 pixels and under 1 MB. The [editable SVG](assets/accord-can-overview.svg) also appears in the README. It uses a synthetic frame, contains no vehicle photography, and can be rendered with:
 
 ```sh
 rsvg-convert --output docs/assets/social-preview.png docs/assets/accord-can-overview.svg
 ```
 
-To set the repository's link-preview image in GitHub, open Settings → General → Social preview → Edit → Upload an image, choose the PNG, and confirm the result. GitHub documents the image requirements and upload flow in [social-preview guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview). Committing the PNG alone does not set that repository setting. The original `v0.1.0` tag/assets are unchanged; these introduction materials are on `main`.
+To replace the repository's link-preview image in GitHub, open Settings → General → Social preview → Edit → Upload an image, choose the PNG, and confirm the result. GitHub documents the image requirements and upload flow in [social-preview guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/customizing-your-repositorys-social-media-preview). Committing the PNG alone does not set that repository setting. The original `v0.1.0` tag/assets are unchanged; these introduction materials are on `main`.
 
 ## Check whether sharing helped
 

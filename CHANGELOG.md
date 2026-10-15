@@ -2,7 +2,7 @@
 
 ## Discovery and independent validation — 15 October 2026
 
-Added a generated visual introduction, direct DBC release downloads, an explicit independent-validation request, and technical/owner-community announcement drafts. Expanded relevant GitHub topics. The graphic uses a synthetic RPM frame and adds no source vehicle imagery. A single generated PNG is allowlisted for social preview; original images remain excluded. Research definitions, runtime tools and the original release assets are unchanged.
+Added a generated visual introduction, direct DBC release downloads, an explicit independent-validation request, and technical/owner-community announcement drafts. Expanded relevant GitHub topics, installed the social-preview card, and published the initial technical announcement in r/CarHacking. The graphic uses a synthetic RPM frame and adds no source vehicle imagery. A single generated PNG is allowlisted for social preview; original images remain excluded. Research definitions, runtime tools and the original release assets are unchanged.
 
 ## Public publication — 15 October 2026
 
