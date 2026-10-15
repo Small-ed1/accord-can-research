@@ -12,4 +12,6 @@ Corrects legacy RPM/speed notes, odometer and fine-distance conventions, raw-ver
 
 No original trip logs, absolute odometer readings, capture wall-clock timestamps, route names, account/device identifiers, source media or proprietary software/manuals are included. No vehicle commands were sent. Fuel volume, remaining physical identities and profile generalization retain their stated uncertainty.
 
-Published as a research prerelease in a private GitHub repository. No reuse license is applied. The 15-group 2007 register and the separate 2003 questions remain explicitly open where new independent measurements are needed; no physical identities or calibrations were invented to close them.
+Initially staged privately and now publicly available as a research prerelease after a history, privacy, metadata, release-integrity and CI review. No reuse license is applied. The 15-group 2007 register and the separate 2003 questions remain explicitly open where new independent measurements are needed; no physical identities or calibrations were invented to close them.
+
+The `v0.1.0` tag and downloadable assets are unchanged from the verified initial snapshot. Public-publication notices on `main` were added afterward; use the release manifest with its tagged source archive.

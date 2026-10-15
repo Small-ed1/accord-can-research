@@ -1,8 +1,8 @@
 # Maintain and release the research repository
 
-The project is hosted at [Small-ed1/accord-can-research](https://github.com/Small-ed1/accord-can-research) as a **private repository**. The initial history preserves the imported 0.1.0 draft, followed by repository-completion changes. Commits use a project display name and the owner's GitHub no-reply email. Hosting under an account can identify authorship despite file sanitization.
+The project is hosted at [Small-ed1/accord-can-research](https://github.com/Small-ed1/accord-can-research) as a **public repository**. It was first staged privately and reviewed before public publication. The history preserves the imported 0.1.0 draft, repository-completion changes, and public-readiness notices. Commits use a project display name and the owner's GitHub no-reply email. Hosting under an account can identify authorship despite file sanitization.
 
-No reuse license has been applied. Read [LICENSING.md](LICENSING.md) before changing distribution terms. A public visibility change is a separate maintainer decision. Keep private source captures and media outside the repository.
+No reuse license has been applied. Read [LICENSING.md](LICENSING.md) before changing distribution terms. The maintainer authorized public visibility; this does not select a reuse license. Keep private source captures and media outside the repository.
 
 ## Validate changes
 
@@ -59,6 +59,8 @@ gh release create v0.1.0 --repo Small-ed1/accord-can-research \
   --notes-file RELEASE_NOTES.md
 ```
 
-This is the initial release command; future releases require a new version and corresponding notes. A prerelease marks the research's provisional scope. Releases in a private repository retain its access restrictions. GitHub provides source archives; do not attach private inputs, the original source collection or local environment files.
+This is the initial release command; future releases require a new version and corresponding notes. A prerelease marks the research's provisional scope. Releases, source archives, issues, commit history and Actions logs are publicly accessible. Do not attach private inputs, the original source collection or local environment files.
+
+The `v0.1.0` tag and its downloadable DBC/manifest assets retain the original verified snapshot. Its source documents describe private staging as it stood at that commit. Current public-publication notices are on `main`; the manifest downloaded from a release applies to that tagged source, not later commits on `main`.
 
 The [remaining-signal register](docs/unresolved.md) describes what needs new evidence. A repository release does not settle those measurements or qualify the software on a vehicle.

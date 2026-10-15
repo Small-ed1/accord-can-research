@@ -55,6 +55,8 @@ The original 2003 raw recording set was not recovered/recounted for this prepara
 
 Privacy review covers the generated release contents, not any earlier public copies, private originals or future commits. Original raw captures/media are not distributed, so readers cannot fully reconstruct the source-level observations from the public bundle alone. The [privacy report](../evidence/privacy-review.json) states the scan scope and remaining identifiability caveats.
 
+Public-readiness review reran both dependency configurations and release hashes, checked the reachable Git history and publication metadata, and retained all existing scientific limits. The public repository still has no reuse license. The original `v0.1.0` tag/assets are preserved; current notices and the current manifest on `main` are a later documentation update.
+
 ## Release integrity
 
 MANIFEST.sha256 hashes every tracked release file other than the manifest itself. The imported ZIP had fixed neutral archive timestamps and no Git history, raw inputs, binary document/media metadata, Python bytecode or private builder scripts. The repository adds a fresh history with a project display name and GitHub no-reply email; virtual environments and bytecode are ignored. CI verifies hashes and complete manifest coverage. GitHub-generated source archives may carry GitHub's archive timestamps. Hash checks protect consistency of an artifact, not truth of every research claim or authenticity of an OEM specification.

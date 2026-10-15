@@ -39,5 +39,20 @@
     "scope": "Supplement to the original 83-file source-aware review: current release files checked for known local paths, attachment identifiers, credential patterns, binary content and excluded file types. New tests contain only synthetic frames; no private original inputs were available for a new source-specific scan.",
     "commit_identity": "Project display name and GitHub no-reply email. Hosting account and no-reply address remain identifying metadata.",
     "original_review": "The original review above is retained as imported evidence; it does not cover future changes."
+  },
+  "public_readiness_review": {
+    "date": "2026-10-15",
+    "baseline_reachable_commits_reviewed": 2,
+    "baseline_unique_file_versions_scanned": 102,
+    "tracked_publication_files": 87,
+    "credential_private_path_or_private_share_findings": 0,
+    "unexpected_binary_raw_or_media_files": 0,
+    "actions_run_logs_reviewed": 2,
+    "release_assets_verified": 3,
+    "issue_bodies_reviewed": 2,
+    "commit_metadata": "Project display name and owner GitHub no-reply email; no private personal email or local path found.",
+    "release_scope": "Original v0.1.0 tag and asset bytes retained; current main receives public-publication notices and an updated manifest.",
+    "distribution": "Public visibility authorized by maintainer. No reuse license applied; scientific limitations and private-source exclusions retained.",
+    "limitations": "Known-pattern checks of history and logs supplement document review; they cannot detect all secrets or guarantee anonymity. Original private sources were unavailable for a new source-specific comparison."
   }
 }

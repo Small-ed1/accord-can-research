@@ -22,6 +22,8 @@ The release was built into a new directory rather than cleaning an existing Git 
 
 The imported ZIP included no `.git` history. Repository creation starts a fresh private history with a project display name and the owner's GitHub no-reply author email; the [publishing guide](../PUBLISHING.md) describes maintenance and releases. Hosting under an identifying account can reveal authorship regardless of file sanitization. Existing public copies or earlier commits, if any, are not removed by creating this repository.
 
+Before public publication, the reachable history, current tracked files, issue text, release assets, commit identities and Actions output were reviewed. Pattern checks found no credential patterns, known private paths, private conversation links or unexpected raw/media files. The source-aware review of the original imported material remains separately recorded in the [privacy report](../evidence/privacy-review.json). The repository, releases, history, issues and Actions logs are public; the owning account and no-reply commit identity remain visible. Pattern checks and document review cannot guarantee anonymity or detect every possible secret.
+
 ## Contributor rules
 
 Do not attach an unreviewed driving log, VIN, plate, exact odometer, screenshot/video or personal route. Share an anonymous test summary and the smallest redacted excerpt needed. Recheck bytes, filenames, archive metadata, timestamps and commit author fields. Do not use the synthetic examples to represent observations they did not contain. Keep removed-source metadata and originals in private storage, not in a hidden folder inside a public repository.

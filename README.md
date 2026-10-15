@@ -5,6 +5,8 @@
 
 [Repository](https://github.com/Small-ed1/accord-can-research) · [Validation runs](https://github.com/Small-ed1/accord-can-research/actions/workflows/validate.yml)
 
+[![Validate research publication](https://github.com/Small-ed1/accord-can-research/actions/workflows/validate.yml/badge.svg)](https://github.com/Small-ed1/accord-can-research/actions/workflows/validate.yml)
+
 This repository documents the CAN signals recovered while developing CarStats on two seventh-generation Accords. It includes the useful decodes, the evidence behind them, the interpretations that were corrected, and the fields that remain unknown.
 
 These are observations from one 2003 and one 2007 research vehicle. They are **not a Honda OEM DBC, a complete vehicle-network specification, or a claim that every Accord of either year uses these messages.** Extra IDs seen in the 2007 sample are not proven exclusive to that model year.
@@ -62,4 +64,4 @@ Retain the factory cluster and safety warnings. Use properly configured listen-o
 
 Raw trip recordings, absolute odometer readings, wall-clock capture times, route labels, device identities and photographs/videos are excluded from the public bundle. Sanitized excerpts and aggregate results retain experimental meaning. Sanitization reduces identifying detail; it cannot guarantee anonymity, particularly when the publishing account identifies its owner.
 
-**No reuse license is applied.** See [licensing](LICENSING.md). The GitHub repository is private; any later public visibility change and reuse terms remain maintainer decisions. The [unresolved register](docs/unresolved.md) identifies research that requires new independent measurements.
+**No reuse license is applied.** See [licensing](LICENSING.md). This repository and its research prerelease are publicly available. Public visibility does not apply an open-source or Creative Commons license. The [unresolved register](docs/unresolved.md) identifies research that requires new independent measurements.

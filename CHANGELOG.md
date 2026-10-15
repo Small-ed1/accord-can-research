@@ -1,5 +1,9 @@
 # Changelog
 
+## Public publication — 15 October 2026
+
+Reviewed reachable Git history, commit identities, release files, issue text and validation results before making the repository public. Updated the README and publishing notices for public access, retained the existing unlicensed status and research confidence limits, and refreshed the current manifest. The original `v0.1.0` tag and its verified assets remain unchanged.
+
 ## 0.1.0 — 15 October 2026
 
 Completed private GitHub repository setup and research prerelease preparation. Added Python 3.10/3.14 CI for standard-library and cantools validation, pinned cantools 45.0.0 as an optional development dependency, and added manifest-coverage checks and consistent text line endings. Strict third-party DBC import now passes, including 4,144 synthetic frames across both profiles. Expanded the suite to 34 tests, covering CLI status codes, audit counts, privacy, timing, year-specific checksums and input errors. Fixed empty audits returning success and source files not being explicitly closed. Refreshed publishing instructions, verification evidence and release hashes. No research confidence claims or reuse terms were changed.
