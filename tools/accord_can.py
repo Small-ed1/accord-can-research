@@ -156,30 +156,31 @@ def audit(path: Path, year: int) -> dict[str,Any]:
     count=Counter();failed=Counter();gaps=Counter();counter_breaks=Counter()
     previous={};first=None;last=None
     lines=unparsed=unsupported=applicable=0
-    for line in path.open(encoding='utf-8'):
-        lines+=1
-        parsed=parse_line(line.rstrip('\r\n'))
-        if parsed is None:
-            unparsed+=1;continue
-        timestamp,cid,payload=parsed
-        if cid not in ids:
-            unsupported+=1;continue
-        count[cid]+=1
-        valid=checksum_valid(year,cid,payload)
-        if valid is not None:
-            applicable+=1
-            if not valid: failed[cid]+=1
-        if timestamp is not None:
-            if first is None: first=timestamp
-            last=timestamp
-        ctr=(payload[7]>>6)&3
-        if cid in previous:
-            old_t,old_ctr=previous[cid]
-            if ctr != (old_ctr+1)%4: counter_breaks[cid]+=1
-            if timestamp is not None and old_t is not None:
-                dt=timestamp-old_t
-                if dt<0 or dt>max(0.5,8/rate[cid]): gaps[cid]+=1
-        previous[cid]=(timestamp,ctr)
+    with path.open(encoding='utf-8') as source:
+        for line in source:
+            lines+=1
+            parsed=parse_line(line.rstrip('\r\n'))
+            if parsed is None:
+                unparsed+=1;continue
+            timestamp,cid,payload=parsed
+            if cid not in ids:
+                unsupported+=1;continue
+            count[cid]+=1
+            valid=checksum_valid(year,cid,payload)
+            if valid is not None:
+                applicable+=1
+                if not valid: failed[cid]+=1
+            if timestamp is not None:
+                if first is None: first=timestamp
+                last=timestamp
+            ctr=(payload[7]>>6)&3
+            if cid in previous:
+                old_t,old_ctr=previous[cid]
+                if ctr != (old_ctr+1)%4: counter_breaks[cid]+=1
+                if timestamp is not None and old_t is not None:
+                    dt=timestamp-old_t
+                    if dt<0 or dt>max(0.5,8/rate[cid]): gaps[cid]+=1
+            previous[cid]=(timestamp,ctr)
     return {'year':year,'input_lines':lines,'parsed_known_frames':sum(count.values()),
             'unparsed_or_unsupported_format_lines':unparsed,'unknown_identifier_frames':unsupported,
             'duration_seconds':round(last-first,6) if first is not None and last is not None else None,
@@ -209,7 +210,7 @@ def main() -> int:
         print(f'Input rejected: {exc}',file=sys.stderr)
         return 2
     print(json.dumps(result,indent=2,allow_nan=False))
-    return 1 if args.command=='audit' and (result['checksum_fail'] or result['unparsed_or_unsupported_format_lines'] or result['unknown_identifier_frames']) else 0
+    return 1 if args.command=='audit' and (not result['parsed_known_frames'] or result['checksum_fail'] or result['unparsed_or_unsupported_format_lines'] or result['unknown_identifier_frames']) else 0
 
 if __name__=='__main__':
     raise SystemExit(main())

@@ -36,8 +36,10 @@ Some source filenames, source hashes, event payloads and identifying timestamps 
 
 From repository root, run `python -m unittest discover -s tests -v`. The dependency-free tests cover parsing, year-specific checksum applicability, checksum failure handling, endian extraction, gear/selector distinctions, non-backported cruise fields, dimmer bit separation, guarded counter arithmetic, fuel scale conventions, distance conventions and unknown/stale state.
 
-The DBC structural tests independently parse the generated signal declarations, verify all 64 bits are covered exactly once per message, and compare deterministic synthetic payload decodes against the JSON-based decoder. This does not replace third-party importer qualification. The optional cantools test performs strict import and comparison when that package is installed; the publication environment could not install it and reports that limitation.
+The DBC structural tests independently parse the generated signal declarations, verify all 64 bits are covered exactly once per message, and compare deterministic synthetic payload decodes against the JSON-based decoder. The optional cantools test separately performs strict import and synthetic comparisons when that package is installed. Repository completion qualified both DBCs with cantools 45.0.0; see [verification](verification.md) for exact counts and scope.
 
 The stationary throttle reference pairs are included with the original stable/transition tags. A separate regression test recomputes the stable fits from the published pairs. This is a reproducible data check rather than a new vehicle experiment.
 
 The offline audit accepts compact or spaced eight-byte standard candump records. It reports unsupported lines instead of silently claiming full coverage, and emits no original path, wall-clock time, payload, odometer or source hash. It does not automatically anonymize arbitrary files or grant permission to publish a raw capture.
+
+CLI audits return status 1 for no known frames, checksum failures, unsupported lines or unknown identifiers. Rejected arguments or unreadable input return status 2. A clean audit returns status 0; it can still contain sequence or timing diagnostics requiring review. All source streams are closed after auditing, including error paths.

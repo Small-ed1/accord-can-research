@@ -1,0 +1,48 @@
+name: Validate research publication
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Python ${{ matrix.python }} / ${{ matrix.dependencies }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10', '3.14']
+        dependencies: [stdlib, cantools]
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install DBC qualification dependency
+        if: matrix.dependencies == 'cantools'
+        run: python -m pip install -r requirements-dev.txt
+      - name: Require the importer in qualification jobs
+        if: matrix.dependencies == 'cantools'
+        run: python -c 'import cantools; print(cantools.__version__)'
+      - name: Run tests
+        run: python -W error::ResourceWarning -m unittest discover -s tests -v
+      - name: Check release hashes
+        run: sha256sum -c MANIFEST.sha256
+      - name: Check manifest file coverage
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          tracked = set(subprocess.check_output(['git', 'ls-files', '-z']).decode().strip('\0').split('\0'))
+          listed = {line.split('  ', 1)[1] for line in Path('MANIFEST.sha256').read_text().splitlines()}
+          expected = tracked - {'MANIFEST.sha256'}
+          if listed != expected:
+              raise SystemExit(f'Manifest mismatch: missing={sorted(expected-listed)}, extra={sorted(listed-expected)}')
+          print(f'Manifest covers all {len(expected)} release files.')
+          PY

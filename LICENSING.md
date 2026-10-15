@@ -1,6 +1,6 @@
 # License and attribution status
 
-No distribution/reuse license has been selected for this draft. Do not describe it as MIT, Apache-licensed, Creative Commons or otherwise open source until the maintainer explicitly chooses and adds appropriate license text. Preparing a GitHub repository does not by itself select a license.
+No distribution/reuse license is applied. Do not describe this repository as MIT, Apache-licensed, Creative Commons or otherwise open source until the maintainer explicitly chooses and adds appropriate license text. Creating a GitHub repository or research release does not by itself select a license.
 
 The original vehicle observations belong to this research project. Publication organization, documentation and offline tooling were prepared with AI assistance. Generated prose and code are not manufacturer documentation and require review. External references are links/attributions, not a claim of ownership or endorsement.
 

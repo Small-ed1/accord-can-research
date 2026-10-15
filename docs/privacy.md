@@ -20,7 +20,7 @@ Relative event intervals, aggregate counts, regression coefficients, controlled 
 
 The release was built into a new directory rather than cleaning an existing Git history. Archive members were inspected/selected before copying. The publication scan checks for local paths, user identifiers, private URLs/file IDs, capture epochs and timestamps, raw odometer examples, unexpected media/binaries and known source-specific strings. Human review of the curated documents supplements pattern matching. The original raw inputs stay outside the release directory and ZIP.
 
-No `.git` history is included. The [publishing guide](../PUBLISHING.md) starts a fresh private staging repository and asks for a GitHub no-reply author email. Publishing from an identifying account can reveal authorship regardless of file sanitization. Existing public copies or earlier commits, if any, are not removed by creating this package.
+The imported ZIP included no `.git` history. Repository creation starts a fresh private history with a project display name and the owner's GitHub no-reply author email; the [publishing guide](../PUBLISHING.md) describes maintenance and releases. Hosting under an identifying account can reveal authorship regardless of file sanitization. Existing public copies or earlier commits, if any, are not removed by creating this repository.
 
 ## Contributor rules
 

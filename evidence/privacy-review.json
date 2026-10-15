@@ -31,5 +31,13 @@
     "The publishing account and future commit metadata can identify authorship",
     "Previously shared copies and future additions are outside this review"
   ],
-  "scope": "Privacy-reduced technical publication. This is not a claim that every original source can be redistributed or that removed information is irrecoverable elsewhere."
+  "scope": "Privacy-reduced technical publication. This is not a claim that every original source can be redistributed or that removed information is irrecoverable elsewhere.",
+  "repository_completion_review": {
+    "reviewed_tracked_release_files": 87,
+    "known_local_path_or_credential_findings": 0,
+    "unexpected_binary_raw_or_media_files": 0,
+    "scope": "Supplement to the original 83-file source-aware review: current release files checked for known local paths, attachment identifiers, credential patterns, binary content and excluded file types. New tests contain only synthetic frames; no private original inputs were available for a new source-specific scan.",
+    "commit_identity": "Project display name and GitHub no-reply email. Hosting account and no-reply address remain identifying metadata.",
+    "original_review": "The original review above is retained as imported evidence; it does not cover future changes."
+  }
 }

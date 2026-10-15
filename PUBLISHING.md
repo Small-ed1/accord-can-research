@@ -1,51 +1,64 @@
-# Stage this package on GitHub
+# Maintain and release the research repository
 
-The preparation session inspected the connected account but had no repository-write action or authenticated GitHub CLI available. **Nothing was pushed or made public.** This directory is a clean repository root with no previous Git history.
+The project is hosted at [Small-ed1/accord-can-research](https://github.com/Small-ed1/accord-can-research) as a **private repository**. The initial history preserves the imported 0.1.0 draft, followed by repository-completion changes. Commits use a project display name and the owner's GitHub no-reply email. Hosting under an account can identify authorship despite file sanitization.
 
-## 1. Review locally
+No reuse license has been applied. Read [LICENSING.md](LICENSING.md) before changing distribution terms. A public visibility change is a separate maintainer decision. Keep private source captures and media outside the repository.
 
-Extract the ZIP and enter `accord-can-research`. Read README.md, docs/privacy.md, docs/verification.md and LICENSING.md. Run:
+## Validate changes
 
-```sh
-python -m unittest discover -s tests -v
-```
-
-No license has been selected. A public research repository can be staged without implying an open-source license, but choose explicit reuse terms before presenting it as open source. Raw inputs and original media must remain outside this directory.
-
-## 2. Create a fresh local history
-
-Use a GitHub no-reply address from your own account settings. Do not paste a personal email into the example or rely on an existing global Git identity without checking it. The following Bash sequence prompts locally and rejects an ordinary email address:
+Run the dependency-free tests from the repository root:
 
 ```sh
-git init -b main
-read -r -p 'Your GitHub no-reply commit email: ' COMMIT_EMAIL
-case "$COMMIT_EMAIL" in
-  *@users.noreply.github.com) ;;
-  *) printf '%s
-' 'Use the no-reply address supplied by your GitHub account.'; exit 1 ;;
-esac
-git config user.name 'Accord CAN Research'
-git config user.email "$COMMIT_EMAIL"
-unset COMMIT_EMAIL
-git add .
-git diff --cached --stat
-# Inspect staged files before the commit.
-git commit -m 'Prepare privacy-reviewed 2003 and 2007 Accord CAN research'
+python -W error::ResourceWarning -m unittest discover -s tests -v
 ```
 
-The name is a project pseudonym. A no-reply address can still associate the commit with your GitHub account, and the owning account remains visible. A pseudonym is not a promise of anonymous authorship.
-
-## 3. Create private staging first
-
-With GitHub CLI installed and authenticated in your own environment:
+Run the full suite, including strict third-party DBC import:
 
 ```sh
-gh auth status
-gh repo create accord-can-research --private --source=. --remote=origin --push
+python -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -W error::ResourceWarning -m unittest discover -s tests -v
 ```
 
-The authenticated account supplies the owner. This creates a new private repository, not a public release. It intentionally does not overwrite any existing repository. A name collision should be resolved deliberately rather than force-pushing over another project.
+On Windows, use `.venv\Scripts\python.exe`. The importer is a development dependency; the decoder and auditor remain standard-library-only. CI tests Python 3.10 and 3.14, both with and without cantools. An absent importer is an explicit skip in local standard-library runs, and is required in CI's qualification jobs.
 
-Review the rendered tables, downloadable DBCs, commit identity, visibility, license decision and tests in private staging. After review, change visibility deliberately in GitHub and create a release from the reviewed commit using RELEASE_NOTES.md. Do not attach the private inputs or the original archive collection to that release.
+## Refresh release integrity
 
-GitHub CLI's official create-repository documentation is https://cli.github.com/manual/gh_repo_create . This package includes no token, credential, automatic publishing script or workflow that can push on your behalf.
+Stage only reviewed publication files. Inspect `git diff --cached --stat` and the staged diff for accidental logs, readings, identifiers or credentials. Update the release notes, changelog, verification report and sanitized test transcript when their contents change.
+
+Regenerate the manifest from staged file contents with this command. It works in a Git checkout and never traverses ignored private inputs or the virtual environment:
+
+```sh
+python - <<'PY'
+from pathlib import Path
+import hashlib
+import subprocess
+
+names = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+rows = []
+for name in sorted(filter(None, names)):
+    if name == 'MANIFEST.sha256':
+        continue
+    content = subprocess.check_output(['git', 'show', f':{name}'])
+    rows.append(f'{hashlib.sha256(content).hexdigest()}  {name}\n')
+Path('MANIFEST.sha256').write_text(''.join(rows), encoding='utf-8', newline='\n')
+PY
+git add MANIFEST.sha256
+sha256sum -c MANIFEST.sha256
+```
+
+Stage all intended changes before regenerating. The hash check reads working files, so a staged/working-tree discrepancy fails validation. CI checks both hashes and complete coverage of tracked files. `.gitattributes` keeps text line endings consistent across checkouts.
+
+## Create a research release
+
+After committing, pushing, and confirming the validation workflow passed for that commit:
+
+```sh
+gh release create v0.1.0 --repo Small-ed1/accord-can-research \
+  --target main --prerelease --title '0.1.0 research publication' \
+  --notes-file RELEASE_NOTES.md
+```
+
+This is the initial release command; future releases require a new version and corresponding notes. A prerelease marks the research's provisional scope. Releases in a private repository retain its access restrictions. GitHub provides source archives; do not attach private inputs, the original source collection or local environment files.
+
+The [remaining-signal register](docs/unresolved.md) describes what needs new evidence. A repository release does not settle those measurements or qualify the software on a vehicle.

@@ -1,8 +1,10 @@
 # Remaining questions: complete 15-group register
 
-This is the latest disposition of the original 2007 register, including calibration and semantic questions. It is not a claim that15 unknown sensors remain. Earlier observations are preserved in the [source edition](../archive/2007/v13-remaining-register.json). The [current JSON](../data/remaining_signals.json) and [CSV](../data/remaining_signals.csv) carry the same groups.
+This is the latest disposition of the original 2007 register, including calibration and semantic questions. It is not a claim that 15 unknown sensors remain. Earlier observations are preserved in the [source edition](../archive/2007/v13-remaining-register.json). The [current JSON](../data/remaining_signals.json) and [CSV](../data/remaining_signals.csv) carry the same groups.
 
 The most useful new references are a complete metered fuel interval, a synchronized independent accessory/clutch-control reference, and an independently labeled diagnostic measurement for 224 B1. Repeating already completed body/HVAC switch sweeps is not the default next step.
+
+Follow-up is tracked in the [2007 research checklist](https://github.com/Small-ed1/accord-can-research/issues/1) and [separate 2003 checklist](https://github.com/Small-ed1/accord-can-research/issues/2). Repository setup and software qualification do not replace the new measurements described below.
 
 ## R01: `0x224 B1`
 

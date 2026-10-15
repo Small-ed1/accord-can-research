@@ -1,7 +1,9 @@
 # Accord CAN Research
 ## Observed F-CAN findings for 2003 and 2007 Honda Accord four-cylinder automatics
 
-**Research publication draft 0.1.0 | 15 October 2026 | Passive observation and offline analysis**
+**Research publication 0.1.0 | 15 October 2026 | Passive observation and offline analysis**
+
+[Repository](https://github.com/Small-ed1/accord-can-research) · [Validation runs](https://github.com/Small-ed1/accord-can-research/actions/workflows/validate.yml)
 
 This repository documents the CAN signals recovered while developing CarStats on two seventh-generation Accords. It includes the useful decodes, the evidence behind them, the interpretations that were corrected, and the fields that remain unknown.
 
@@ -20,7 +22,7 @@ These are observations from one 2003 and one 2007 research vehicle. They are **n
 | What changed from the earlier reports? | [Corrections](docs/corrections.md) and [research archive](archive/README.md) |
 | What evidence can a reader reproduce? | [Methodology](docs/methodology.md), [source register](docs/provenance.md), [verification](docs/verification.md) |
 | What was removed before sharing? | [Privacy and exclusions](docs/privacy.md) |
-| How is this staged on GitHub? | [Publishing guide](PUBLISHING.md) |
+| How is this maintained and released on GitHub? | [Publishing guide](PUBLISHING.md) |
 
 ### Machine-readable material
 
@@ -50,10 +52,14 @@ python tools/accord_can.py decode --year 2007 --id 12C --data 805A00000BB810CE
 
 The decode example is synthetic. The tools open local files only and contain no vehicle-transmit path. DBCs expose locations and linear transforms; they do not enforce checksums, freshness, counter continuity, calibration confidence or safe display behavior.
 
+For third-party DBC qualification, create a virtual environment, install `requirements-dev.txt`, and run the same suite with that environment's Python. GitHub Actions runs both the standard-library suite and cantools qualification on Python 3.10 and 3.14, and verifies the release manifest. See [verification](docs/verification.md) for commands and scope.
+
+The CLI returns 0 on a successful decode or an audit with known frames and no checksum, parsing or unknown-ID failures; 1 on those audit failures or an empty audit; and 2 on rejected arguments or unreadable input. Sequence discontinuities and time gaps are reported for review and do not independently change the exit code.
+
 ### Safety, privacy and license
 
 Retain the factory cluster and safety warnings. Use properly configured listen-only hardware for observation. This material contains no control-message injection, ECU firmware, immobilizer bypass, or instructions to create faults.
 
 Raw trip recordings, absolute odometer readings, wall-clock capture times, route labels, device identities and photographs/videos are excluded from the public bundle. Sanitized excerpts and aggregate results retain experimental meaning. Sanitization reduces identifying detail; it cannot guarantee anonymity, particularly when the publishing account identifies its owner.
 
-**License selection remains a maintainer decision.** No open-source or Creative Commons license has been applied by this draft. See [licensing](LICENSING.md). This package has not been pushed to GitHub by the preparation session.
+**No reuse license is applied.** See [licensing](LICENSING.md). The GitHub repository is private; any later public visibility change and reuse terms remain maintainer decisions. The [unresolved register](docs/unresolved.md) identifies research that requires new independent measurements.

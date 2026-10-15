@@ -1,0 +1,2 @@
+# Optional DBC qualification only. The offline tools use the standard library.
+cantools==45.0.0

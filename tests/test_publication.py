@@ -141,11 +141,14 @@ class TestPublication(unittest.TestCase):
         for year in can.YEARS:
             database=cantools.database.load_file(str(ROOT/f'dbc/accord_{year}_research.dbc'),strict=True)
             self.assertEqual(len(database.messages),len(can.frame_ids(year)))
+            rng=random.Random(2026+year)
             for msg in database.messages:
-                payload=bytes.fromhex('0123456789ABCDEF')
-                external=msg.decode(payload,decode_choices=False)
-                local=can.decode(year,msg.frame_id,payload,validate=False,include_raw=True)
-                self.assertEqual(set(external),set(local))
-                for name in external:self.assertAlmostEqual(external[name],local[name],places=8)
+                payloads=[bytes(8),bytes([255])*8,bytes.fromhex('0123456789ABCDEF')]
+                payloads.extend(bytes(rng.randrange(256) for _ in range(8)) for _ in range(256))
+                for payload in payloads:
+                    external=msg.decode(payload,decode_choices=False)
+                    local=can.decode(year,msg.frame_id,payload,validate=False,include_raw=True)
+                    self.assertEqual(set(external),set(local))
+                    for name in external:self.assertAlmostEqual(external[name],local[name],places=8)
 
 if __name__=='__main__':unittest.main()

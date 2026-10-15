@@ -8,4 +8,4 @@ Keep legacy corrections visible. Add a source tag and changelog entry; update JS
 
 Use passive observation, existing safely acquired records and ordinary stationary checks. Do not induce faults, manipulate safety systems, operate a computer while driving or send experimental frames onto a road vehicle. This repository does not accept an active vehicle-control path as part of its decoder tools.
 
-Source captures remain separately held. An aggregate result without public raw data must say so. No legal or engineering conclusion follows solely from a checksum pass or signal correlation. License selection for this draft is still pending; see LICENSING.md.
+Source captures remain separately held. An aggregate result without public raw data must say so. No legal or engineering conclusion follows solely from a checksum pass or signal correlation. No reuse license is applied; see LICENSING.md.
