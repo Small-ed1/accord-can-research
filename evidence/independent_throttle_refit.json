@@ -1,0 +1,18 @@
+{
+  "scope": "Fresh OLS refit of published stationary reference pairs using original stable labels. Percent values in CSV are rounded, so last digits differ from original full-precision OBD-byte fit. No new calibration experiment.",
+  "all_pairs": 123,
+  "fits": {
+    "11": {
+      "stable_pairs": 53,
+      "slope_percent_per_raw": 0.32213452861475084,
+      "intercept_percent": 11.541592211649597,
+      "rmse_percentage_points": 0.13082646753919447
+    },
+    "45": {
+      "stable_pairs": 51,
+      "slope_percent_per_raw": 0.44498864571660807,
+      "intercept_percent": 0.09802465744932576,
+      "rmse_percentage_points": 0.13092273793746892
+    }
+  }
+}

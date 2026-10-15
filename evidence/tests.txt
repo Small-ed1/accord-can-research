@@ -1,0 +1,31 @@
+test_bad_checksum_rejected_by_decoder (test_decoder.TestDecoder.test_bad_checksum_rejected_by_decoder) ... ok
+test_candump_parser_both_formats (test_decoder.TestDecoder.test_candump_parser_both_formats) ... ok
+test_checksum_vector_and_corruption (test_decoder.TestDecoder.test_checksum_vector_and_corruption) ... ok
+test_checksum_year_boundary (test_decoder.TestDecoder.test_checksum_year_boundary) ... ok
+test_counter_continuity_contract (test_decoder.TestDecoder.test_counter_continuity_contract) ... ok
+test_cruise_not_backported_to_2003 (test_decoder.TestDecoder.test_cruise_not_backported_to_2003) ... ok
+test_dimmer_split_and_legacy_raw (test_decoder.TestDecoder.test_dimmer_split_and_legacy_raw) ... ok
+test_freshness_has_unknown_state (test_decoder.TestDecoder.test_freshness_has_unknown_state) ... ok
+test_gear_six_and_seven_are_distinct (test_decoder.TestDecoder.test_gear_six_and_seven_are_distinct) ... ok
+test_raw_normalized_fuel_convention (test_decoder.TestDecoder.test_raw_normalized_fuel_convention) ... ok
+test_rpm_and_temperature_without_obd_divide (test_decoder.TestDecoder.test_rpm_and_temperature_without_obd_divide) ... ok
+test_throttle_feedback_is_only_derived_from_b3 (test_decoder.TestDecoder.test_throttle_feedback_is_only_derived_from_b3) ... ok
+test_unsupported_year_and_frame (test_decoder.TestDecoder.test_unsupported_year_and_frame) ... ok
+test_year_specific_distance_and_odometer (test_decoder.TestDecoder.test_year_specific_distance_and_odometer) ... ok
+test_offline_decoder_is_present (test_decoder.TestImplementationPresent.test_offline_decoder_is_present) ... ok
+test_all_fifteen_remaining_groups_retained (test_publication.TestPublication.test_all_fifteen_remaining_groups_retained) ... ok
+test_all_original_2003_signal_rows_retained (test_publication.TestPublication.test_all_original_2003_signal_rows_retained) ... ok
+test_current_markdown_local_links_resolve (test_publication.TestPublication.test_current_markdown_local_links_resolve) ... ok
+test_dbc_every_bit_covered_once (test_publication.TestPublication.test_dbc_every_bit_covered_once) ... ok
+test_dbc_synthetic_values_match_json_decoder (test_publication.TestPublication.test_dbc_synthetic_values_match_json_decoder) ... ok
+test_external_cantools_strict_import (test_publication.TestPublication.test_external_cantools_strict_import) ... skipped 'Optional third-party cantools importer is not installed'
+test_fresh_raw_audit_totals_are_consistent (test_publication.TestPublication.test_fresh_raw_audit_totals_are_consistent) ... ok
+test_json_and_csv_agree (test_publication.TestPublication.test_json_and_csv_agree) ... ok
+test_odometer_slots_redacted_in_historical_masks (test_publication.TestPublication.test_odometer_slots_redacted_in_historical_masks) ... ok
+test_published_stationary_reference_regression (test_publication.TestPublication.test_published_stationary_reference_regression) ... ok
+test_source_tags_are_documented (test_publication.TestPublication.test_source_tags_are_documented) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.099s
+
+OK (skipped=1)

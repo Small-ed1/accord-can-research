@@ -1,0 +1,10 @@
+CAN Protocol / Integrity Details,,,,,
+,,,,,
+Topic,Applies To,Formula / Rule,Observed Result,Nuance,CarStats Use
+Rolling counter,All six IDs,counter=(B7>>6)&3,Independent 0→1→2→3 per ID; zero observed discontinuities,Modulo-4 counter can hide losses that are multiples of 4 frames.,"Continuity health, not exact loss count."
+Nibble checksum,"0x0D4, 0x12C, 0x188, 0x224",expected=(-sum((b>>4)+(b&0x0F) for b in B0:B6) - (B7>>4)) & 0x0F,"576,806/576,806 baseline applicable frames passed; later logs also passed",No CAN-ID contribution needed for observed formula.,Reject/flag corrupted frames.
+No mapped checksum,"0x0C8, 0x1F4",Low portion of B7 observed zero,No checksum claimed,Do not force the other checksum onto these messages.,Counter only.
+Bus rate,All,"500,000 bit/s",Observed/configured,"Classical CAN, standard 11-bit IDs.",SocketCAN 500k listen-only.
+Frame cadence,0x0C8/0D4/12C/188,~100 Hz,~10 ms nominal period,Sensor physics may update slower than frames.,Display newest speed/RPM at screen refresh; don't throttle to telemetry rate.
+Frame cadence,0x1F4,~25 Hz,~40 ms nominal,Switch status still feels immediate.,No need to interpolate discrete states.
+Frame cadence,0x224,~10 Hz,~100 ms nominal,Fuel accumulator is quantized at this cadence.,Smooth derivative for instant MPG.

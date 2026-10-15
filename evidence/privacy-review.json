@@ -1,0 +1,35 @@
+{
+  "reviewed_public_files": 83,
+  "pattern_scan_findings": 0,
+  "checks": [
+    "Known source-specific personal/account/device/place strings",
+    "Private conversation IDs/URLs and local source paths",
+    "Capture epochs and dated capture filenames",
+    "Known route labels",
+    "VIN-shaped identifiers",
+    "Unexpected binary/media/raw/archive file types",
+    "Source-specific absolute-odometer ranges and raw odometer byte examples; workbook/map review"
+  ],
+  "manual_review": [
+    "Current year-specific docs and confidence boundaries",
+    "Historical warning banners and workbook current-qualification columns",
+    "Odometer slots withheld in the80-byte historical mask table",
+    "No original payload/trip-grid/media/private source archive included",
+    "Publication made from a new clean directory, without Git history",
+    "Stationary reference pairs use relative time only"
+  ],
+  "excluded": [
+    "Original full-CAN and focused source logs",
+    "Full chronological driving grids",
+    "Original photographs, video, audio and workbook binary",
+    "Private input hashes, identities, capture clocks and absolute odometers",
+    "Private build scripts and compiled Python bytecode"
+  ],
+  "limitations": [
+    "Pattern matching cannot guarantee anonymity",
+    "Distinctive research and vehicle pairing may be recognizable",
+    "The publishing account and future commit metadata can identify authorship",
+    "Previously shared copies and future additions are outside this review"
+  ],
+  "scope": "Privacy-reduced technical publication. This is not a claim that every original source can be redistributed or that removed information is irrecoverable elsewhere."
+}

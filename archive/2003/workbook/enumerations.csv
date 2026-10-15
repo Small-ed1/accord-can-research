@@ -1,0 +1,34 @@
+Expanded State / Code Enumerations,,,,,
+,,,,,
+Field,Raw / Add,Meaning,Nuance,Confidence,Use
+0x0D4 B0 bits1:0,0,Lights off,Mask only bits1:0; parking brake is separate bit2.,Vehicle-confirmed,Production
+0x0D4 B0 bits1:0,1,Aux / parking lights,Dedicated lights test.,Vehicle-confirmed,Production
+0x0D4 B0 bits1:0,2,Low beams,Dedicated lights test.,Vehicle-confirmed,Production
+0x0D4 B0 bits1:0,3,High beams,Dedicated lights test.,Vehicle-confirmed,Production
+0x188 B0,0,P or N,Use selector B3 to distinguish.,Vehicle-confirmed,Production
+0x188 B0,1,1st gear,,Vehicle-confirmed,Production
+0x188 B0,2,2nd gear,,Vehicle-confirmed,Production
+0x188 B0,3,3rd gear,,Vehicle-confirmed,Production
+0x188 B0,4,4th gear,,Vehicle-confirmed,Production
+0x188 B0,5,5th gear,,Vehicle-confirmed,Production
+0x188 B0,6,Reverse,Confirmed by stationary R hold.,Vehicle-confirmed,Production
+0x188 B0,7,Shifting / engaging,Never display as 7th gear or Reverse.,Vehicle-confirmed,Production
+0x188 B1,0,P/N target,Target/request changes before actual gear.,Strong,Production
+0x188 B1,1–5,Forward target gear,Use for shift intent.,Strong,Production
+0x188 B1,6,Reverse target,,Vehicle-confirmed,Production
+0x188 B3,0x00,Between detents / transition,,Vehicle-confirmed,Production
+0x188 B3,0x01,P,,Vehicle-confirmed,Production
+0x188 B3,0x02,R,,Vehicle-confirmed,Production
+0x188 B3,0x04,N,,Vehicle-confirmed,Production
+0x188 B3,0x08,D,D-range bit7 in B2 asserts shortly after B3 settles into D.,Vehicle-confirmed,Production
+0x188 B3,0x20,D3,,Vehicle-confirmed,Production
+0x188 B3,0x40,2,,Vehicle-confirmed,Production
+0x188 B3,0x80,1,,Vehicle-confirmed,Production
+0x1F4 B0 wiper,base+0x00,Off,No turn gives 0x04.,Vehicle-confirmed,Production
+0x1F4 B0 wiper,base+0x08,Intermittent,Intermittent delay/speed setting is not represented.,Vehicle-confirmed,Production
+0x1F4 B0 wiper,base+0x10,Slow,,Vehicle-confirmed,Production
+0x1F4 B0 wiper,base+0x18,Fast OR manual-up,Manual-up and FAST collapse to same state; mist/pull-back is absent.,Vehicle-confirmed,Production
+0x1F4 B0 turn,+0x00,No left/right indication,Base wiper state remains.,Vehicle-confirmed,Production
+0x1F4 B0 turn,+0x20,Left,Example wipers off: 0x24.,Vehicle-confirmed,Production
+0x1F4 B0 turn,+0x40,Right,Example wipers off: 0x44.,Vehicle-confirmed,Production
+0x1F4 B0 hazard,unknown,Hazards not represented as a distinct observed state,Do not assume +0x60.,Unresolved,Do not implement

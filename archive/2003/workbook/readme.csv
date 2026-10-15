@@ -1,0 +1,33 @@
+2003 Honda Accord EX K24A4 :  Full Observed F-CAN Mapping,
+,
+Workbook version,[date withheld]
+Vehicle,"2003 Honda Accord EX, K24A4, 5-speed automatic"
+Bus,"500 kbit/s Classical CAN, 11-bit IDs, 8-byte frames"
+Observed IDs,"0x0C8, 0x0D4, 0x12C, 0x188, 0x1F4, 0x224"
+Capture policy,Listen-only
+Primary evidence,"809,393-frame baseline + labeled switch/lights/shifter/fuel/injector tests"
+Current scope,Observed high-speed F-CAN only; B-CAN/body signals may exist elsewhere
+Important,"Mappings are vehicle-observed/reverse-engineered, not a Honda OEM CAN specification."
+,
+How to read the workbook,
+Sheet,Purpose
+Signal Map,"Canonical per-signal mapping, formulas, confidence, caveats and CarStats handling."
+Byte Layout,"Every byte/bit region of every observed message, including constants and unknowns."
+Enumerations,"Expanded state/code tables for lights, gears, selector, wipers and turn signals."
+KOEO Indicators,MIL/oil/battery warning-light candidates and how to confirm the remaining two.
+MPG & Fuel,"Fuel accumulator findings, working calibration, injector correlation and live MPG calculator."
+,
+Confidence vocabulary,
+Vehicle-confirmed,Deliberately operated on this car and the CAN field followed the labeled action.
+OBD-validated,Compared against independently decoded OBD readings.
+Confirmed/high,"Multiple independent measurements establish identity/scale, but not necessarily OEM documentation."
+Very high,Strong physical/data-list corroboration; not deliberately fault-induced.
+Strong candidate,"Lifecycle and architecture fit well, but a discriminating test is still missing."
+Unresolved,Keep raw. Do not assign production semantics.
+Observed constant,May be reserved or a feature not exercised by this vehicle/capture set.
+,
+Battery-light update,
+The 2003 Accord charging-system circuit explicitly routes alternator L/FR/C information into the ECM/PCM and shows the gauge charging-system indicator driven through the CAN-linked gauge assembly.,
+"That makes 0x224 B6 bit1 a strong charging-system-indicator candidate: it is set KOEO and clear in every running capture, exactly matching the normal battery-light lifecycle.",
+"It is NOT yet fault-confirmed. A high-resolution start capture with the cluster visible can compare the battery lamp, oil lamp, 0x224 B6.1, 0x0D4 B2.7 and RPM clear-times without inducing a fault.",
+https://jdmfsm.info/Auto/Japan/Honda/Accord/Honda%20Accord%20ESM%202003/site/a-2003/sea3e00a14100000000eaat00.html,

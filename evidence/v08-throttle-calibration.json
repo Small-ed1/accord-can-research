@@ -1,0 +1,139 @@
+{
+  "source_tag": "07-V08",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": {
+    "vehicle": "2007 Honda Accord EX 2.4 5AT, user vehicle",
+    "capture": {
+      "source_archive_sha256": null,
+      "frame_count": 57251,
+      "can_id_count": 10,
+      "duration_seconds": 95.66730093955994,
+      "start_local": null,
+      "end_local": null,
+      "OBD_reference_count": 245,
+      "OBD_reference_pid_counts": {
+        "11": 62,
+        "45": 61,
+        "0C": 61,
+        "0D": 61
+      }
+    },
+    "checksums": {
+      "0A6": {
+        "frames": 9569,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "0C8": {
+        "frames": 9569,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "0D4": {
+        "frames": 9567,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "12C": {
+        "frames": 9569,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "188": {
+        "frames": 9569,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "1F4": {
+        "frames": 2392,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": false
+      },
+      "20C": {
+        "frames": 4784,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "224": {
+        "frames": 957,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "2E4": {
+        "frames": 956,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      },
+      "405": {
+        "frames": 319,
+        "simple_payload_checksum_passes": null,
+        "checksum_formula_applicable": true
+      }
+    },
+    "rolling_counter_discontinuities": {
+      "0A6": 0,
+      "0C8": 0,
+      "0D4": 0,
+      "12C": 0,
+      "188": 0,
+      "1F4": 0,
+      "20C": 0,
+      "224": 0,
+      "2E4": 0,
+      "405": 0
+    },
+    "B2_minus_B4_counts": {
+      "9": 6970,
+      "10": 1342,
+      "8": 1257
+    },
+    "calibration": {
+      "11": {
+        "can_source": "0A6.B3",
+        "reference": "absolute_throttle",
+        "number_stable_samples": 53,
+        "total_samples": 62,
+        "obd_byte_predicted_slope": 0.8214430439917793,
+        "obd_byte_predicted_intercept": 29.43106005899083,
+        "percent_per_can_count": 0.3221345270555997,
+        "percent_intercept": 11.541592179996403,
+        "rmse_percent_stable": 0.1308264801843127,
+        "r_squared_stable": 0.999964842704283,
+        "raw_obd_byte_max_abs_stable": 0.824047454916844,
+        "valid_observed_can_range": [
+          8,
+          208
+        ],
+        "model_type": "Empirical affine fit to quantized OBD ECU readings; not Honda factory formula"
+      },
+      "45": {
+        "can_source": "0A6.B3",
+        "reference": "relative_throttle",
+        "number_stable_samples": 51,
+        "total_samples": 61,
+        "obd_byte_predicted_slope": 1.1347210436757105,
+        "obd_byte_predicted_intercept": 0.2499629819841141,
+        "percent_per_can_count": 0.44498864457871,
+        "percent_intercept": 0.09802469881729964,
+        "rmse_percent_stable": 0.13092285499023762,
+        "r_squared_stable": 0.9999804813302902,
+        "raw_obd_byte_max_abs_stable": 0.6722686686102026,
+        "valid_observed_can_range": [
+          8,
+          208
+        ],
+        "model_type": "Empirical affine fit to quantized OBD ECU readings; not Honda factory formula"
+      }
+    },
+    "B2_to_B3_derivative_peak_lag": "approximately 5 packets, 50 ms, in engine-off pedal sweep; not a guaranteed actuator delay",
+    "limitations": [
+      "ECU OBD PIDs 11 and 45 give throttle, not actual accelerator pedal position",
+      "B2 command/target role inferred from dynamics, not verified with OEM documentation",
+      "B4 nearly algebraically redundant with B2 and should not be labeled physical pedal percentage",
+      "Percent fits are empirical approximations within observed B3 range (8..208), not validated on-road or under load",
+      "OBD polls are about 1.3 seconds apart per PID; all transition points excluded from calibration",
+      "Values are byte-quantized and should not be given false precision",
+      "Engine OFF pedal holds and warmed-up idle only; not all throttle dynamic conditions"
+    ]
+  }
+}

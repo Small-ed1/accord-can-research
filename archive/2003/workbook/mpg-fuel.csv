@@ -1,0 +1,25 @@
+Fuel Accumulator / MPG Working Model,,,,,
+,,,,,
+Parameter,Value,,Snap-on correlation,Formula / Observation,Meaning
+Working fuel scale (mL per raw 0x224 unit),0.1,,Raw accumulator rate,≈ RPM × (INJ_ms - 0.78) / 600,Near-perfect fit across parked RPM holds
+Plausible lower bound,0.09,,LSB behavior,raw accumulator was always even in checked data,Natural semantic count may be raw >> 1
+Plausible upper bound,0.1,,Fuel cut,Accumulator rate = 0 during in-gear closed-throttle coast,Functional fuel-use identity confirmed
+Injector dead-time fit (ms),0.78,,Honda documentation,Navigation trip computer receives fuel pulses via F-CAN,Independent architectural confirmation
+Status,Working calibration; exact factory volume/count not yet proven,,Display recommendation,Use configurable scale; validate with fill-to-fill later,Do not bury calibration as an unchangeable magic number
+,,,,,
+Interactive working MPG calculator,,,,,
+Input / Output,Value,,Trip calculation,Value,
+Vehicle speed (mph),60,,Fuel used (mL),12000,
+Raw 0x224 rate (raw units/sec),20,,Fuel used (US gal),3.170064628297781,
+Fuel scale (mL/raw),0.1,,Trip MPG,31.5450982,
+Fuel flow (gal/hr),1.9020387769786686,,Fuel-cut handling,"When raw rate is 0 and speed >0, show Fuel Cut / ∞ rather than divide by zero.",
+Instant MPG,31.545098199999998,,Instant-MPG smoothing,Use ~2–5 s smoothing; raw instantaneous rate is quantized at 10 Hz.,
+Trip distance (miles),100,,,,
+Trip raw fuel delta,120000,,,,
+,,,,,
+Implementation nuance,,,,,
+Use native 0x0C8 distance/speed for MPG distance. The 0.0098 OBD-equivalent speed calibration is not the native distance convention.,,,,,
+Unwrap 0x224 B2:B3 across 16-bit wraps before trip accumulation.,,,,,
+"Because raw fuel count changes in even increments, you may store semantic_count = raw>>1, but keep the physical scale definition explicit about whether it is per raw unit or per shifted count.",,,,,
+"Current working convention in this workbook is mL per RAW 16-bit unit, not per shifted count.",,,,,
+https://charm.li/Honda/2003/Accord%20L4-2.4L/Repair%20and%20Diagnosis/Accessories%20and%20Optional%20Equipment/Navigation%20System/Description%20and%20Operation/System%20Description/Overview/,,,,,

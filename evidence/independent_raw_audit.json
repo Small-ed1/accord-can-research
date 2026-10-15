@@ -1,0 +1,394 @@
+{
+  "verification_scope": "Fresh aggregate recount of five recovered private 2007 raw logs with the bundled offline auditor. Not a new physical test or re-run of every historical regression.",
+  "recordings": {
+    "drive-a": {
+      "year": 2007,
+      "input_lines": 518217,
+      "parsed_known_frames": 518217,
+      "unparsed_or_unsupported_format_lines": 0,
+      "unknown_identifier_frames": 0,
+      "duration_seconds": 865.988745,
+      "checksum_applicable": 496567,
+      "checksum_pass": 496567,
+      "checksum_fail": 0,
+      "checksum_not_applicable": 21650,
+      "per_id": {
+        "0x0A6": {
+          "frames": 86614,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0C8": {
+          "frames": 86613,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0D4": {
+          "frames": 86599,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x12C": {
+          "frames": 86613,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x188": {
+          "frames": 86613,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x1F4": {
+          "frames": 21650,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x20C": {
+          "frames": 43307,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x224": {
+          "frames": 8662,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x2E4": {
+          "frames": 8659,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x405": {
+          "frames": 2887,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        }
+      },
+      "privacy": "No path, absolute time, payload, odometer reading or source hash in this output.",
+      "limitations": "Unparsed lines are counted. Counter discontinuities are not exact losses. Gap threshold=max(0.5 s, 8 nominal periods)."
+    },
+    "drive-b": {
+      "year": 2007,
+      "input_lines": 319681,
+      "parsed_known_frames": 319681,
+      "unparsed_or_unsupported_format_lines": 0,
+      "unknown_identifier_frames": 0,
+      "duration_seconds": 536.750662,
+      "checksum_applicable": 306330,
+      "checksum_pass": 306330,
+      "checksum_fail": 0,
+      "checksum_not_applicable": 13351,
+      "per_id": {
+        "0x0A6": {
+          "frames": 53407,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0C8": {
+          "frames": 53407,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0D4": {
+          "frames": 53402,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x12C": {
+          "frames": 53407,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x188": {
+          "frames": 53407,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x1F4": {
+          "frames": 13351,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x20C": {
+          "frames": 26838,
+          "checksum_fail": 0,
+          "counter_discontinuities": 1,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x224": {
+          "frames": 5340,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x2E4": {
+          "frames": 5341,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x405": {
+          "frames": 1781,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        }
+      },
+      "privacy": "No path, absolute time, payload, odometer reading or source hash in this output.",
+      "limitations": "Unparsed lines are counted. Counter discontinuities are not exact losses. Gap threshold=max(0.5 s, 8 nominal periods)."
+    },
+    "standing-a": {
+      "year": 2007,
+      "input_lines": 446211,
+      "parsed_known_frames": 446211,
+      "unparsed_or_unsupported_format_lines": 0,
+      "unknown_identifier_frames": 0,
+      "duration_seconds": 773.899396,
+      "checksum_applicable": 427643,
+      "checksum_pass": 427643,
+      "checksum_fail": 0,
+      "checksum_not_applicable": 18568,
+      "per_id": {
+        "0x0A6": {
+          "frames": 74296,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x0C8": {
+          "frames": 74296,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x0D4": {
+          "frames": 74443,
+          "checksum_fail": 0,
+          "counter_discontinuities": 9,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x12C": {
+          "frames": 74296,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x188": {
+          "frames": 74296,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x1F4": {
+          "frames": 18568,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x20C": {
+          "frames": 38683,
+          "checksum_fail": 0,
+          "counter_discontinuities": 2,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x224": {
+          "frames": 7428,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x2E4": {
+          "frames": 7428,
+          "checksum_fail": 0,
+          "counter_discontinuities": 3,
+          "large_or_backward_time_gaps": 3
+        },
+        "0x405": {
+          "frames": 2477,
+          "checksum_fail": 0,
+          "counter_discontinuities": 1,
+          "large_or_backward_time_gaps": 1
+        }
+      },
+      "privacy": "No path, absolute time, payload, odometer reading or source hash in this output.",
+      "limitations": "Unparsed lines are counted. Counter discontinuities are not exact losses. Gap threshold=max(0.5 s, 8 nominal periods)."
+    },
+    "body-a": {
+      "year": 2007,
+      "input_lines": 158096,
+      "parsed_known_frames": 158096,
+      "unparsed_or_unsupported_format_lines": 0,
+      "unknown_identifier_frames": 0,
+      "duration_seconds": 264.178055,
+      "checksum_applicable": 151492,
+      "checksum_pass": 151492,
+      "checksum_fail": 0,
+      "checksum_not_applicable": 6604,
+      "per_id": {
+        "0x0A6": {
+          "frames": 26424,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0C8": {
+          "frames": 26424,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0D4": {
+          "frames": 26419,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x12C": {
+          "frames": 26424,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x188": {
+          "frames": 26424,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x1F4": {
+          "frames": 6604,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x20C": {
+          "frames": 13212,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x224": {
+          "frames": 2643,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x2E4": {
+          "frames": 2642,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x405": {
+          "frames": 880,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        }
+      },
+      "privacy": "No path, absolute time, payload, odometer reading or source hash in this output.",
+      "limitations": "Unparsed lines are counted. Counter discontinuities are not exact losses. Gap threshold=max(0.5 s, 8 nominal periods)."
+    },
+    "startup-a": {
+      "year": 2007,
+      "input_lines": 7794,
+      "parsed_known_frames": 7794,
+      "unparsed_or_unsupported_format_lines": 0,
+      "unknown_identifier_frames": 0,
+      "duration_seconds": 15.22516,
+      "checksum_applicable": 7472,
+      "checksum_pass": 7472,
+      "checksum_fail": 0,
+      "checksum_not_applicable": 322,
+      "per_id": {
+        "0x0A6": {
+          "frames": 1282,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0C8": {
+          "frames": 1282,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x0D4": {
+          "frames": 1286,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x12C": {
+          "frames": 1282,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x188": {
+          "frames": 1282,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x1F4": {
+          "frames": 322,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x20C": {
+          "frames": 758,
+          "checksum_fail": 0,
+          "counter_discontinuities": 1,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x224": {
+          "frames": 128,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x2E4": {
+          "frames": 129,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        },
+        "0x405": {
+          "frames": 43,
+          "checksum_fail": 0,
+          "counter_discontinuities": 0,
+          "large_or_backward_time_gaps": 0
+        }
+      },
+      "privacy": "No path, absolute time, payload, odometer reading or source hash in this output.",
+      "limitations": "Unparsed lines are counted. Counter discontinuities are not exact losses. Gap threshold=max(0.5 s, 8 nominal periods)."
+    }
+  },
+  "totals": {
+    "parsed_known_frames": 1449999,
+    "checksum_applicable": 1389504,
+    "checksum_pass": 1389504,
+    "checksum_fail": 0,
+    "checksum_not_applicable": 60495,
+    "unparsed_or_unsupported_format_lines": 0,
+    "unknown_identifier_frames": 0
+  }
+}

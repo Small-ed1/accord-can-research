@@ -1,0 +1,170 @@
+VERSION "0.1.0-research-draft"
+
+NS_ :
+    CM_
+    BA_DEF_
+    BA_
+    VAL_
+
+BS_:
+
+BU_: Research
+
+BO_ 200 Accord_2003_0C8: 8 Research
+ SG_ Raw_B0 : 0|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B1 : 8|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B2 : 16|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B3 : 24|8@1+ (1,0) [0|255] "raw" Research
+ SG_ SpeedB : 39|16@0+ (0.01,0) [0|655.35] "km/h nominal" Research
+ SG_ DistanceTicksRaw : 48|8@1+ (1,0) [0|255] "tick" Research
+ SG_ Raw_B7_bits0_5 : 56|6@1+ (1,0) [0|63] "raw" Research
+ SG_ RollingCounter : 62|2@1+ (1,0) [0|3] "count" Research
+
+BO_ 212 Accord_2003_0D4: 8 Research
+ SG_ LightingMode : 0|2@1+ (1,0) [0|3] "code" Research
+ SG_ ParkingBrake : 2|1@1+ (1,0) [0|1] "bool" Research
+ SG_ Raw_B0_bits3_7 : 3|5@1+ (1,0) [0|31] "raw" Research
+ SG_ Raw_B1 : 8|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B2_bits0_5 : 16|6@1+ (1,0) [0|63] "raw" Research
+ SG_ AccessoryControlCandidate : 22|1@1+ (1,0) [0|1] "bool" Research
+ SG_ OilWarningCandidate : 23|1@1+ (1,0) [0|1] "bool" Research
+ SG_ FuelSenderRelatedB3 : 24|8@1+ (1,0) [0|255] "raw" Research
+ SG_ FuelSenderRelatedB4 : 32|8@1+ (1,0) [0|255] "raw" Research
+ SG_ SecondarySpeedRaw : 47|16@0+ (1,0) [0|65535] "raw" Research
+ SG_ NibbleChecksum : 56|4@1+ (1,0) [0|15] "nibble" Research
+ SG_ Raw_B7_bits4_5 : 60|2@1+ (1,0) [0|3] "raw" Research
+ SG_ RollingCounter : 62|2@1+ (1,0) [0|3] "count" Research
+
+BO_ 300 Accord_2003_12C: 8 Research
+ SG_ CoolantTemperature : 0|8@1+ (1,-40) [-40|215] "degC" Research
+ SG_ IntakeAirTemperature : 8|8@1+ (1,-40) [-40|215] "degC approx" Research
+ SG_ Raw_B2 : 16|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B3 : 24|8@1+ (1,0) [0|255] "raw" Research
+ SG_ EngineRPM : 39|16@0+ (1,0) [0|65535] "rpm" Research
+ SG_ ServiceBrake : 48|1@1+ (1,0) [0|1] "bool" Research
+ SG_ Raw_B6_bits1_3 : 49|3@1+ (1,0) [0|7] "raw" Research
+ SG_ MILStatus : 52|1@1+ (1,0) [0|1] "bool" Research
+ SG_ Raw_B6_bits5_7 : 53|3@1+ (1,0) [0|7] "raw" Research
+ SG_ NibbleChecksum : 56|4@1+ (1,0) [0|15] "nibble" Research
+ SG_ Raw_B7_bits4_5 : 60|2@1+ (1,0) [0|3] "raw" Research
+ SG_ RollingCounter : 62|2@1+ (1,0) [0|3] "count" Research
+
+BO_ 392 Accord_2003_188: 8 Research
+ SG_ ReportedGear : 0|8@1+ (1,0) [0|255] "code" Research
+ SG_ TargetGear : 8|8@1+ (1,0) [0|255] "code" Research
+ SG_ Raw_B2_bits0_6 : 16|7@1+ (1,0) [0|127] "raw" Research
+ SG_ DRangeCandidate : 23|1@1+ (1,0) [0|1] "bool" Research
+ SG_ SelectorCode : 24|8@1+ (1,0) [0|255] "code" Research
+ SG_ Raw_B4 : 32|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B5 : 40|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B6 : 48|8@1+ (1,0) [0|255] "raw" Research
+ SG_ NibbleChecksum : 56|4@1+ (1,0) [0|15] "nibble" Research
+ SG_ Raw_B7_bits4_5 : 60|2@1+ (1,0) [0|3] "raw" Research
+ SG_ RollingCounter : 62|2@1+ (1,0) [0|3] "count" Research
+
+BO_ 500 Accord_2003_1F4: 8 Research
+ SG_ Raw_B0_bits0_2 : 0|3@1+ (1,0) [0|7] "raw" Research
+ SG_ WiperMode : 3|2@1+ (1,0) [0|3] "code" Research
+ SG_ LeftTurnRequest : 5|1@1+ (1,0) [0|1] "bool" Research
+ SG_ RightTurnRequest : 6|1@1+ (1,0) [0|1] "bool" Research
+ SG_ Raw_B0_bits7_7 : 7|1@1+ (1,0) [0|1] "raw" Research
+ SG_ DimmerRaw : 8|8@1+ (1,0) [0|255] "raw" Research
+ SG_ UnidentifiedB2 : 16|8@1+ (1,0) [0|255] "raw" Research
+ SG_ OdometerRaw : 31|24@0+ (1,0) [0|16777215] "raw odometer count" Research
+ SG_ Raw_B6 : 48|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B7_bits0_5 : 56|6@1+ (1,0) [0|63] "raw" Research
+ SG_ RollingCounter : 62|2@1+ (1,0) [0|3] "count" Research
+
+BO_ 548 Accord_2003_224: 8 Research
+ SG_ Raw_B0 : 0|8@1+ (1,0) [0|255] "raw" Research
+ SG_ UnidentifiedB1 : 8|8@1+ (1,0) [0|255] "raw" Research
+ SG_ FuelAccumulatorRaw : 23|16@0+ (1,0) [0|65535] "raw fuel tick" Research
+ SG_ Raw_B4 : 32|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B5 : 40|8@1+ (1,0) [0|255] "raw" Research
+ SG_ Raw_B6_bits0_0 : 48|1@1+ (1,0) [0|1] "raw" Research
+ SG_ ChargingWarningCandidate : 49|1@1+ (1,0) [0|1] "bool" Research
+ SG_ Raw_B6_bits2_7 : 50|6@1+ (1,0) [0|63] "raw" Research
+ SG_ NibbleChecksum : 56|4@1+ (1,0) [0|15] "nibble" Research
+ SG_ Raw_B7_bits4_5 : 60|2@1+ (1,0) [0|3] "raw" Research
+ SG_ RollingCounter : 62|2@1+ (1,0) [0|3] "count" Research
+
+CM_ "Research observations only. Unknown fields and candidates are not validated vehicle control interfaces. Read docs/protocol.md and docs/calibration.md.";
+CM_ SG_ 200 Raw_B0 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 200 Raw_B1 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 200 Raw_B2 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 200 Raw_B3 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 200 SpeedB "high; source 03-V3. 2003 primary nominal speed. On 2007 about 2.06% higher than A; not an independent wheel speed. 2003 OBD-equivalent empirical alternative raw*0.0098.";
+CM_ SG_ 200 DistanceTicksRaw "high; source 03-V3. Modulo 256. Approximate historical 10 m/tick. Do not import 2007 calibration automatically.";
+CM_ SG_ 200 Raw_B7_bits0_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 200 RollingCounter "protocol-validated; source 03-V3. Modulo 4 per identifier; discontinuity is not an exact loss count.";
+CM_ SG_ 212 LightingMode "high; source 03-V3. Reported mode, not measured lamp current. DRL output is not decoded by this enum.";
+VAL_ 212 LightingMode 0 "off" 1 "parking" 2 "low beam" 3 "high beam or flash";
+CM_ SG_ 212 ParkingBrake "high; source 03-V3. Set=applied switch/status; not holding force.";
+CM_ SG_ 212 Raw_B0_bits3_7 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 212 Raw_B1 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 212 Raw_B2_bits0_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 212 AccessoryControlCandidate "experimental; source 03-V3. 2003 A/C-correlated behavior. 2007 asserts with fresh zero RPM for long intervals; not proof of compressor rotation, mechanical load or physical clutch engagement.";
+CM_ SG_ 212 OilWarningCandidate "candidate; source 03-MAP. 2003 lifecycle-based candidate; 2007 lamp-identified. Boolean status only, never oil pressure in physical units.";
+CM_ SG_ 212 FuelSenderRelatedB3 "high-related-raw; source 03-V3. Sender-related channel; angle-like interpretation historical on 2003. No confirmed tank percentage or gallons. 2007 output changes on approximately 200 ms grid.";
+CM_ SG_ 212 FuelSenderRelatedB4 "high-related-raw; source 03-V3. Related inversely to B3. Historical 2003 5/255 V scaling is an approximation, not a direct voltmeter calibration; retain raw.";
+CM_ SG_ 212 SecondarySpeedRaw "high-related-raw; source 03-V3. Filtered/smoothed speed-related field. Nominal raw/100 convention; fitted offsets are invalid near standstill. Not a separately decoded wheel speed.";
+CM_ SG_ 212 NibbleChecksum "protocol-validated; source 03-V3. Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.";
+CM_ SG_ 212 Raw_B7_bits4_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 212 RollingCounter "protocol-validated; source 03-V3. Modulo 4 per identifier; discontinuity is not an exact loss count.";
+CM_ SG_ 300 CoolantTemperature "obd-validated; source 03-V2. 2003 independently OBD compared; 2007 prior mapping supported by traces. Frame frequency is not independent sensor update frequency.";
+CM_ SG_ 300 IntakeAirTemperature "obd-validated; source 03-V2. 2003 all 93 comparisons within 1 C. Formula is approximate.";
+CM_ SG_ 300 Raw_B2 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 300 Raw_B3 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 300 EngineRPM "obd-validated; source 03-V2. BE16 directly in rpm. Do not use the generic OBD divide-by-four rule.";
+CM_ SG_ 300 ServiceBrake "high; source 03-V3. Set=service brake switch/status asserted; no brake pressure measurement.";
+CM_ SG_ 300 Raw_B6_bits1_3 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 300 MILStatus "strong-inference; source 03-MAP. Lamp command/status only. Off does not establish no pending/stored DTC. On 2007 can time out after about 20 s with engine stopped.";
+CM_ SG_ 300 Raw_B6_bits5_7 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 300 NibbleChecksum "protocol-validated; source 03-V3. Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.";
+CM_ SG_ 300 Raw_B7_bits4_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 300 RollingCounter "protocol-validated; source 03-V3. Modulo 4 per identifier; discontinuity is not an exact loss count.";
+CM_ SG_ 392 ReportedGear "high; source 03-V3. Keep selector and target alongside this field. Code 7 may persist during Reverse engagement; it is not seventh gear.";
+VAL_ 392 ReportedGear 0 "Park or Neutral status; use selector" 1 "1st" 2 "2nd" 3 "3rd" 4 "4th" 5 "5th" 6 "Settled Reverse" 7 "Transition or unsettled status, not seventh gear";
+CM_ SG_ 392 TargetGear "high; source 03-V3. Requested/reported target; a change is not proof of physical clutch transfer completion.";
+VAL_ 392 TargetGear 0 "Park or Neutral status; use selector" 1 "1st" 2 "2nd" 3 "3rd" 4 "4th" 5 "5th" 6 "Settled Reverse";
+CM_ SG_ 392 Raw_B2_bits0_6 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 392 DRangeCandidate "candidate; source 03-V3. 2003 D-associated candidate; 2007 green D lamp including startup bulb-check in Park. Not TCC lockup or shift-interlock feedback.";
+CM_ SG_ 392 SelectorCode "high; source 03-V3. Raw one-hot-like selector codes. No 0x10 position established. Unknown code is not Park.";
+VAL_ 392 SelectorCode 0 "Between positions or unknown" 1 "P" 2 "R" 4 "N" 8 "D" 32 "D3" 64 "2" 128 "1";
+CM_ SG_ 392 Raw_B4 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 392 Raw_B5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 392 Raw_B6 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 392 NibbleChecksum "protocol-validated; source 03-V3. Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.";
+CM_ SG_ 392 Raw_B7_bits4_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 392 RollingCounter "protocol-validated; source 03-V3. Modulo 4 per identifier; discontinuity is not an exact loss count.";
+CM_ SG_ 500 Raw_B0_bits0_2 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 500 WiperMode "high; source 03-V3. 2003 manual-up shares high state. Mist, washer and intermittent delay are not independently decoded.";
+VAL_ 500 WiperMode 0 "off" 1 "intermittent" 2 "low" 3 "high or manual-up";
+CM_ SG_ 500 LeftTurnRequest "high; source 03-V3. Request/state, not actual lamp flash phase. A hazard encoding is not established.";
+CM_ SG_ 500 RightTurnRequest "high; source 03-V3. Request/state, not actual lamp flash phase. Do not manufacture hazards by OR-ing turn bits.";
+CM_ SG_ 500 Raw_B0_bits7_7 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 500 DimmerRaw "working-interpretation; source 03-PATCH. Later decoder implements ordinary range 0..99 with special 0xE4 full-bright handling. Not calibrated optical brightness; keep raw.";
+CM_ SG_ 500 UnidentifiedB2 "unknown; source 03-V3. 2003 one 0x04 transient; 2007 zero in examined recordings. Constancy is not proof of unused/reserved.";
+CM_ SG_ 500 OdometerRaw "maintainer-confirmed-scale; source 03-ODO. Derived miles=raw/1.61 by later dashboard comparison. DBC retains raw to distinguish this from true SI kilometers. Absolute readings intentionally withheld.";
+CM_ SG_ 500 Raw_B6 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 500 Raw_B7_bits0_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 500 RollingCounter "protocol-validated; source 03-V3. Modulo 4 per identifier; discontinuity is not an exact loss count.";
+CM_ SG_ 548 Raw_B0 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 548 UnidentifiedB1 "unknown; source 03-V3. 03 observed F3..F6; 07 F3..F5. Slow-changing raw field; direct LTFT/MAP/ECT/fuel-level/count identities unsupported.";
+CM_ SG_ 548 FuelAccumulatorRaw "high; source 03-V3. Even BE16 raw values; normalized=raw>>1. Raw modulo65536, normalized modulo32768. Reset/gap-aware increments only. Volume factor configurable and not an OEM scale.";
+CM_ SG_ 548 Raw_B4 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 548 Raw_B5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 548 Raw_B6_bits0_0 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 548 ChargingWarningCandidate "candidate; source 03-MAP. 2003 charging-system candidate; 2007 battery lamp identified. Not measured voltage or charging-health certification.";
+CM_ SG_ 548 Raw_B6_bits2_7 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 548 NibbleChecksum "protocol-validated; source 03-V3. Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.";
+CM_ SG_ 548 Raw_B7_bits4_5 "unknown-or-unexcited; source 03-MAP. Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.";
+CM_ SG_ 548 RollingCounter "protocol-validated; source 03-V3. Modulo 4 per identifier; discontinuity is not an exact loss count.";
+
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 100000;
+BA_ "GenMsgCycleTime" BO_ 200 10;
+BA_ "GenMsgCycleTime" BO_ 212 10;
+BA_ "GenMsgCycleTime" BO_ 300 10;
+BA_ "GenMsgCycleTime" BO_ 392 10;
+BA_ "GenMsgCycleTime" BO_ 500 40;
+BA_ "GenMsgCycleTime" BO_ 548 100;

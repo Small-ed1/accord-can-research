@@ -1,0 +1,26 @@
+# Local source data must never be staged with this publication.
+private*/
+raw*/
+local-inputs/
+*.log
+*.pcap
+*.pcapng
+*.blf
+*.mf4
+*.zip
+*.tar
+*.gz
+*.mp4
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.heic
+*.xlsx
+.env
+.env.*
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store

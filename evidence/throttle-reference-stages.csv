@@ -1,0 +1,8 @@
+stage,start_s,end_s,B2_median,B3_median,B4_median,OBD_11_pct_median,OBD_11_count,OBD_45_pct_median,OBD_45_count
+KOEO pedal released,13.0,22.4,9,19,0,17.6471,7,8.6275,7
+Nominal 25% pedal,24.0,32.2,44,44,35,25.8824,7,19.6078,6
+Nominal 50% pedal,34.5,40.7,100,100,91,43.9216,5,44.7059,5
+Nominal 75% pedal,42.8,49.7,122,122,113,50.9804,5,54.5098,5
+Pedal fully depressed,51.9,59.7,208,208,198,78.4314,6,92.549,6
+KOEO released again,64.5,70.7,9,19,0,17.6471,4,8.6275,5
+Engine idling,84.5,95.5,8,8,0,14.1176,6,3.5294,5

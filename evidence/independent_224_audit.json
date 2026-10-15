@@ -1,0 +1,30 @@
+{
+  "scope": "Fresh payload checksum and parsed-column verification of two recovered private focused captures. These are separate from the five full-CAN logs. No epoch, path or payload is exported.",
+  "recordings": {
+    "continuous-a": {
+      "packets": 4735,
+      "checksum_pass": 4735,
+      "checksum_fail": 0,
+      "decoded_column_mismatches": 0,
+      "B1_transitions": 1,
+      "B1_values_hex": [
+        "F3",
+        "F4"
+      ],
+      "duration_seconds": 473.30206
+    },
+    "continuous-b": {
+      "packets": 7378,
+      "checksum_pass": 7378,
+      "checksum_fail": 0,
+      "decoded_column_mismatches": 0,
+      "B1_transitions": 0,
+      "B1_values_hex": [
+        "F4"
+      ],
+      "duration_seconds": 737.571282
+    }
+  },
+  "total_packets": 12113,
+  "all_checksums_pass": true
+}

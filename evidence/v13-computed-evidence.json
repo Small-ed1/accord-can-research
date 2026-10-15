@@ -1,0 +1,433 @@
+{
+  "source_tag": "07-V13",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": {
+    "accessory_flag_at_zero_rpm": [
+      {
+        "capture": "drive-b",
+        "first_s": 3.0876951217651367,
+        "last_s": 10.35901403427124,
+        "first_to_last_s": 7.2713189125061035,
+        "frames": 728,
+        "line_start": 338,
+        "line_end": 4689,
+        "max_source_age_ms": 3.5610198974609375,
+        "max_can_gap_s": 0.01077890396118164,
+        "first_payload": null,
+        "rpm_source_line": 336
+      },
+      {
+        "capture": "standing",
+        "first_s": 599.4186551570892,
+        "last_s": 619.1400351524353,
+        "first_to_last_s": 19.72137999534607,
+        "frames": 1973,
+        "line_start": 357734,
+        "line_end": 369533,
+        "max_source_age_ms": 8.458137512207031,
+        "max_can_gap_s": 0.010618925094604492,
+        "first_payload": null,
+        "rpm_source_line": 357731
+      },
+      {
+        "capture": "standing",
+        "first_s": 692.7250730991364,
+        "last_s": 706.9270231723785,
+        "first_to_last_s": 14.201950073242188,
+        "frames": 1421,
+        "line_start": 412951,
+        "line_end": 421447,
+        "max_source_age_ms": 7.467985153198242,
+        "max_can_gap_s": 0.010865926742553711,
+        "first_payload": null,
+        "rpm_source_line": 412947
+      },
+      {
+        "capture": "standing",
+        "first_s": 735.2778770923615,
+        "last_s": 749.2199640274048,
+        "first_to_last_s": 13.942086935043335,
+        "frames": 1395,
+        "line_start": 423102,
+        "line_end": 431441,
+        "max_source_age_ms": 8.47482681274414,
+        "max_can_gap_s": 0.010789155960083008,
+        "first_payload": null,
+        "rpm_source_line": 423098
+      }
+    ],
+    "accessory_caution": "Zero engine speed excludes interpreting an asserted bit as proof of a rotating compressor or present mechanical load. It does not exclude an electrical clutch command or energized stationary clutch.",
+    "speed_distance_comparison": [
+      {
+        "capture": "drive-a",
+        "ticks": 1681,
+        "tick_distance_km": 16.495776,
+        "A_km": 16.466005593881672,
+        "B_km": 16.80477090314395,
+        "B_on_A_slope": 1.020582138033662,
+        "B_on_A_offset": -0.06963368156912363,
+        "fit_rmse": 0.4602347659212297,
+        "A_error_pct": -0.1804729048110687,
+        "B_error_pct": 1.873175915725045
+      },
+      {
+        "capture": "drive-b",
+        "ticks": 856,
+        "tick_distance_km": 8.399990634146343,
+        "A_km": 8.392988005737132,
+        "B_km": 8.56563326886197,
+        "B_on_A_slope": 1.020567678570304,
+        "B_on_A_offset": 0.015268458473238778,
+        "fit_rmse": 0.4406175170885342,
+        "A_error_pct": -0.08336471686938296,
+        "B_error_pct": 1.9719383262438495
+      }
+    ],
+    "speed_scaled_copy_holdout": {
+      "training": "drive-a",
+      "test": "drive-b",
+      "test_n": 44994,
+      "slope": 1.020582138033662,
+      "intercept": -0.06963368156912363,
+      "rmse_raw": 0.44214620388371084,
+      "max_abs_raw": 1.3319768336623383,
+      "fit_range": "A>1000 raw; no GPS reference"
+    },
+    "speed_smoothing_model": {
+      "train_capture": "drive-a",
+      "held_out_capture": "drive-b",
+      "time_constant_s": 0.281,
+      "gain": 1.0001546355288378,
+      "offset_raw": -53.0840321463498,
+      "recurrence": "z[n] = exp(-0.01/tau)*z[n-1] + (1-exp(-0.01/tau))*speedB[n]",
+      "alignment": "Last preceding source, age <=30 ms; filter is computed at nominal 10 ms source intervals. First five seconds and filtered/delayed speeds <=1000 raw are excluded.",
+      "pure_delay_model": {
+        "lag_s": 0.274,
+        "gain": 0.999903973420844,
+        "offset_raw": -51.220277179978694
+      },
+      "common_sample_comparison": [
+        {
+          "capture": "drive-a",
+          "common_n": 73291,
+          "smoothing_rmse_raw": 3.8911204076322683,
+          "delay_rmse_raw": 16.016939535946182
+        },
+        {
+          "capture": "drive-b",
+          "common_n": 45029,
+          "smoothing_rmse_raw": 4.323195791216489,
+          "delay_rmse_raw": 18.300830150287034
+        }
+      ],
+      "caution": "Empirical model comparison, not a recovered Honda firmware algorithm or physical sensor identity. Behavior near standstill is not modeled."
+    },
+    "sender_B3_update_grid": [
+      {
+        "capture": "drive-a",
+        "changes": 3108,
+        "intervals_under_5s": 3107,
+        "max_200ms_grid_error_ms": 0.8811473846435658,
+        "median_change_s": 0.20000910758972168,
+        "min_change_s": 0.19911885261535645
+      },
+      {
+        "capture": "drive-b",
+        "changes": 1745,
+        "intervals_under_5s": 1743,
+        "max_200ms_grid_error_ms": 0.5729675292968639,
+        "median_change_s": 0.20001792907714844,
+        "min_change_s": 0.19957208633422852
+      },
+      {
+        "capture": "body",
+        "changes": 69,
+        "intervals_under_5s": 67,
+        "max_200ms_grid_error_ms": 0.22501945495623232,
+        "median_change_s": 0.20005488395690918,
+        "min_change_s": 0.19988393783569336
+      }
+    ],
+    "sender_prior_fit_validation": [
+      {
+        "capture": "drive-a",
+        "samples": 3108,
+        "rmse_raw": 0.5596741853931037,
+        "mean_error_raw": -2.906961101120971e-13,
+        "max_abs_raw": 2.9442758371854154
+      },
+      {
+        "capture": "drive-b",
+        "samples": 1745,
+        "rmse_raw": 0.5112686864689172,
+        "mean_error_raw": -0.0028879262002388852,
+        "max_abs_raw": 2.875207461246845
+      },
+      {
+        "capture": "body",
+        "samples": 69,
+        "rmse_raw": 1.3596312454368864,
+        "mean_error_raw": 1.3068857777286453,
+        "max_abs_raw": 2.4473282000174095
+      }
+    ],
+    "throttle_B2_fixed_B4_variation": [
+      {
+        "capture": "drive-a",
+        "B2_minus_B4_min": 4,
+        "B2_minus_B4_max": 20,
+        "B2_208_frames": 2437,
+        "B4_when_B2_208": [
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196
+        ]
+      },
+      {
+        "capture": "drive-b",
+        "B2_minus_B4_min": 5,
+        "B2_minus_B4_max": 19,
+        "B2_208_frames": 353,
+        "B4_when_B2_208": [
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195
+        ]
+      },
+      {
+        "capture": "body",
+        "B2_minus_B4_min": 7,
+        "B2_minus_B4_max": 8,
+        "B2_208_frames": 0,
+        "B4_when_B2_208": []
+      },
+      {
+        "capture": "standing",
+        "B2_minus_B4_min": 4,
+        "B2_minus_B4_max": 11,
+        "B2_208_frames": 430,
+        "B4_when_B2_208": [
+          199
+        ]
+      },
+      {
+        "capture": "startup",
+        "B2_minus_B4_min": 8,
+        "B2_minus_B4_max": 10,
+        "B2_208_frames": 0,
+        "B4_when_B2_208": []
+      }
+    ],
+    "throttle_raw_examples": [
+      {
+        "capture": "drive-a",
+        "s": 397.479914188385,
+        "line": 237854,
+        "B2": 208,
+        "B3": 208,
+        "B4": 188,
+        "payload": null
+      },
+      {
+        "capture": "standing",
+        "s": 610.2120549678802,
+        "line": 364191,
+        "B2": 208,
+        "B3": 200,
+        "B4": 199,
+        "payload": null
+      }
+    ],
+    "initialization_events": [
+      {
+        "capture": "standing",
+        "reinit_s": 589.2643620967865,
+        "0D4_preceding_gap_s": 1.159147024154663,
+        "2E4_last_before_s": 587.3289020061493,
+        "2E4_first_after_s": 589.266538143158,
+        "2E4_gap_s": 1.937636137008667,
+        "FF_count": 0,
+        "20C_last_before_s": 589.2174711227417,
+        "20C_first_after_s": 589.3149960041046,
+        "20C_gap_s": 0.09752488136291504,
+        "1F4_last_before_s": 587.3672831058502,
+        "1F4_first_after_s": 589.2660160064697,
+        "1F4_gap_s": 1.8987329006195068,
+        "224_last_before_s": 587.4486870765686,
+        "224_first_after_s": 589.3952341079712,
+        "224_gap_s": 1.946547031402588,
+        "0C8_last_before_s": 587.4977250099182,
+        "0C8_first_after_s": 589.3043241500854,
+        "0C8_gap_s": 1.8065991401672363
+      },
+      {
+        "capture": "standing",
+        "reinit_s": 692.3930201530457,
+        "0D4_preceding_gap_s": 0.62919020652771,
+        "2E4_last_before_s": 691.0661640167236,
+        "2E4_first_after_s": 692.3934581279755,
+        "2E4_gap_s": 1.327294111251831,
+        "FF_count": 0,
+        "20C_last_before_s": 692.3341541290283,
+        "20C_first_after_s": 692.4416241645813,
+        "20C_gap_s": 0.10747003555297852,
+        "1F4_last_before_s": 691.0658831596375,
+        "1F4_first_after_s": 692.3932490348816,
+        "1F4_gap_s": 1.3273658752441406,
+        "224_last_before_s": 691.1854419708252,
+        "224_first_after_s": 692.5218651294708,
+        "224_gap_s": 1.3364231586456299,
+        "0C8_last_before_s": 691.1944761276245,
+        "0C8_first_after_s": 692.4309380054474,
+        "0C8_gap_s": 1.236461877822876
+      },
+      {
+        "capture": "standing",
+        "reinit_s": 734.945032119751,
+        "0D4_preceding_gap_s": 27.69022798538208,
+        "2E4_last_before_s": 706.887274980545,
+        "2E4_first_after_s": 734.9454619884491,
+        "2E4_gap_s": 28.058187007904053,
+        "FF_count": 5,
+        "20C_last_before_s": 734.8863410949707,
+        "20C_first_after_s": 734.9938449859619,
+        "20C_gap_s": 0.10750389099121094,
+        "1F4_last_before_s": 706.9073719978333,
+        "1F4_first_after_s": 734.9452390670776,
+        "1F4_gap_s": 28.037867069244385,
+        "224_last_before_s": 706.9205479621887,
+        "224_first_after_s": 735.074056148529,
+        "224_gap_s": 28.153508186340332,
+        "0C8_last_before_s": 707.0094420909882,
+        "0C8_first_after_s": 734.9831211566925,
+        "0C8_gap_s": 27.973679065704346
+      },
+      {
+        "capture": "drive-b",
+        "reinit_s": 2.731091022491455,
+        "0D4_preceding_gap_s": null,
+        "2E4_last_before_s": null,
+        "2E4_first_after_s": 2.7315380573272705,
+        "2E4_gap_s": null,
+        "FF_count": 5,
+        "20C_last_before_s": 2.679611921310425,
+        "20C_first_after_s": 2.7770800590515137,
+        "20C_gap_s": 0.09746813774108887,
+        "1F4_last_before_s": null,
+        "1F4_first_after_s": 2.7315189838409424,
+        "1F4_gap_s": null,
+        "224_last_before_s": null,
+        "224_first_after_s": 2.8575520515441895,
+        "224_gap_s": null,
+        "0C8_last_before_s": null,
+        "0C8_first_after_s": 2.766361951828003,
+        "0C8_gap_s": null
+      },
+      {
+        "capture": "startup",
+        "reinit_s": 2.3782479763031006,
+        "0D4_preceding_gap_s": null,
+        "2E4_last_before_s": null,
+        "2E4_first_after_s": 2.378669023513794,
+        "2E4_gap_s": null,
+        "FF_count": 5,
+        "20C_last_before_s": 2.3195459842681885,
+        "20C_first_after_s": 2.4270880222320557,
+        "20C_gap_s": 0.10754203796386719,
+        "1F4_last_before_s": null,
+        "1F4_first_after_s": 2.378467082977295,
+        "1F4_gap_s": null,
+        "224_last_before_s": null,
+        "224_first_after_s": 2.507322072982788,
+        "224_gap_s": null,
+        "0C8_last_before_s": null,
+        "0C8_first_after_s": 2.416382074356079,
+        "0C8_gap_s": null
+      }
+    ],
+    "partial_network_gap": {
+      "capture": "standing",
+      "begin_s": 707.2548041343689,
+      "end_s": 734.945032119751,
+      "by_id": {
+        "0A6": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "0C8": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "12C": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "188": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "0D4": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "1F4": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "20C": {
+          "frames_inside_gap": 1382,
+          "b0_values": [
+            0
+          ],
+          "rpm_values_range": [
+            0,
+            0
+          ]
+        },
+        "2E4": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "405": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        },
+        "224": {
+          "frames_inside_gap": 0,
+          "b0_values": [],
+          "rpm_values_range": null
+        }
+      }
+    },
+    "fuel_volume": {
+      "loop_raw_delta": 15236,
+      "town_raw_delta": 10000,
+      "combined_raw_delta": 25236,
+      "normalized_delta": 12618,
+      "mL_per_raw_count_provisional": 0.105585,
+      "mL_per_normalized_count_provisional": 0.21117,
+      "provisional_mL_for_combined_counter": 2664.54306,
+      "raw_modulus": 65536,
+      "normalized_modulus": 32768,
+      "warning": "No 2007 metered fill-to-fill validation. Never accumulate modulo deltas through resets or unobserved coverage."
+    }
+  }
+}

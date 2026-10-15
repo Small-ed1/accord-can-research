@@ -1,0 +1,278 @@
+{
+  "source_tag": "07-V11",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": {
+    "audits": {
+      "drive-a": {
+        "filename": "drive-a.log",
+        "sha256": null,
+        "frames": 518217,
+        "first_epoch_us": null,
+        "duration_s": 865.988745,
+        "backward_timestamps": 0,
+        "messages": {
+          "0A6": {
+            "frames": 86614,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 11.248
+          },
+          "0C8": {
+            "frames": 86613,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 11.377
+          },
+          "0D4": {
+            "frames": 86599,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.997,
+            "maximum_interval_ms": 11.302
+          },
+          "12C": {
+            "frames": 86613,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 11.226
+          },
+          "188": {
+            "frames": 86613,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 10.918
+          },
+          "1F4": {
+            "frames": 21650,
+            "checksum_checked": false,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 39.996,
+            "maximum_interval_ms": 41.533
+          },
+          "20C": {
+            "frames": 43307,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 19.997,
+            "maximum_interval_ms": 20.685
+          },
+          "224": {
+            "frames": 8662,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 99.983,
+            "maximum_interval_ms": 100.497
+          },
+          "2E4": {
+            "frames": 8659,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 99.99,
+            "maximum_interval_ms": 101.958
+          },
+          "405": {
+            "frames": 2887,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 299.96,
+            "maximum_interval_ms": 301.754
+          }
+        }
+      },
+      "into_town": {
+        "filename": "drive-b.log",
+        "sha256": null,
+        "frames": 319681,
+        "first_epoch_us": null,
+        "duration_s": 536.750662,
+        "backward_timestamps": 0,
+        "messages": {
+          "0A6": {
+            "frames": 53407,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 11.222
+          },
+          "0C8": {
+            "frames": 53407,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 11.139
+          },
+          "0D4": {
+            "frames": 53402,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.997,
+            "maximum_interval_ms": 11.036
+          },
+          "12C": {
+            "frames": 53407,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 10.968
+          },
+          "188": {
+            "frames": 53407,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 9.998,
+            "maximum_interval_ms": 10.738
+          },
+          "1F4": {
+            "frames": 13351,
+            "checksum_checked": false,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 39.996,
+            "maximum_interval_ms": 41.369
+          },
+          "20C": {
+            "frames": 26838,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 1,
+            "median_interval_ms": 19.997,
+            "maximum_interval_ms": 97.468
+          },
+          "224": {
+            "frames": 5340,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 99.985,
+            "maximum_interval_ms": 100.404
+          },
+          "2E4": {
+            "frames": 5341,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 100.004,
+            "maximum_interval_ms": 101.672
+          },
+          "405": {
+            "frames": 1781,
+            "checksum_checked": true,
+            "checksum_failures": 0,
+            "counter_discontinuities": 0,
+            "median_interval_ms": 300.011,
+            "maximum_interval_ms": 301.704
+          }
+        }
+      }
+    },
+    "total_raw_frames": 837898,
+    "applicable_checksum_checks": 802897,
+    "events": 21,
+    "duration_s": 69.618456,
+    "duration_by_capture": {
+      "drive-a": 55.910491,
+      "into_town": 13.707965
+    },
+    "fuel_samples_with_active_flag": 694,
+    "fuel_intervals_wholly_inside": 673,
+    "fuel_nonzero_deltas_inside": 0,
+    "exit_groups": {
+      "zero_request_1s": 10,
+      "positive_request_at_exit": 7,
+      "positive_request_soon_after": 4
+    },
+    "zero_request_exits_all_bracket_1200_rpm": true,
+    "zero_request_before_exit_rpm": {
+      "minimum": 1201,
+      "median": 1207.5,
+      "maximum": 1233
+    },
+    "zero_request_after_exit_rpm": {
+      "minimum": 1189,
+      "median": 1196.5,
+      "maximum": 1200
+    },
+    "zero_request_exit_speedA_kmh": {
+      "minimum": 56.88,
+      "median": 61.365,
+      "maximum": 90.9
+    },
+    "entry_after_request_zero_seconds": {
+      "minimum": 0.339984,
+      "median": 0.919766,
+      "maximum": 1.699489
+    },
+    "on_rpm_last_preceding": {
+      "minimum": 1557,
+      "median": 1938,
+      "maximum": 3531
+    },
+    "on_rpm_first_following": {
+      "minimum": 1538,
+      "median": 1935,
+      "maximum": 3506
+    },
+    "on_speedA_kmh": {
+      "minimum": 56.7,
+      "median": 91.84,
+      "maximum": 120.37
+    },
+    "on_coolant_c": {
+      "minimum": 84,
+      "median": 86,
+      "maximum": 91
+    },
+    "entries_with_brake": 4,
+    "entries_with_cruise": 5,
+    "positive_request_exits_with_cruise": 7,
+    "entry_request_all_zero": true,
+    "all_selectors_D": true,
+    "exit_to_fuel_counter_increment_ms": {
+      "minimum": 31.134,
+      "median": 241.076,
+      "maximum": 431.02
+    },
+    "last_positive_fuel_to_entry_ms": {
+      "minimum": 8.769,
+      "median": 148.765,
+      "maximum": 448.788
+    },
+    "positive_request_before_exit_ms": {
+      "minimum": 20.009,
+      "median": 509.934,
+      "maximum": 1290.097
+    },
+    "next_positive_request_after_exit_ms": {
+      "minimum": 19.969,
+      "median": 75.0155,
+      "maximum": 139.964
+    },
+    "notes": [
+      "Entry/exit time is first changed 0A6 frame; the true state transition is bounded by the previous frame.",
+      "Companion values use the last preceding frame with a freshness check; next PCM sample is retained separately.",
+      "Exit groups are classified from B4, not from an assumed RPM threshold.",
+      "Counter timings are reported-accounting timings, not directly measured injector electrical timings.",
+      "Source sequence numbers detect discontinuities modulo four; no claim of detecting all possible frame losses.",
+      "0x1F4 is excluded from the observed nibble-checksum formula."
+    ]
+  }
+}

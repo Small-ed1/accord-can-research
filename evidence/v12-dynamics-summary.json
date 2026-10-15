@@ -1,0 +1,216 @@
+{
+  "source_tag": "07-V12",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": {
+    "version": "1.2",
+    "scope": "Offline behavior analysis; no new hardware or vehicle commands; no installation",
+    "frames": 1486228,
+    "applicable_checksums": 1424216,
+    "driving_frames": 837898,
+    "request_episodes": 98,
+    "clean_completed_shifts": 74,
+    "upshifts": 49,
+    "downshifts": 25,
+    "outcomes": {
+      "('censored', False)": 1,
+      "('completed', False)": 11,
+      "('completed', True)": 74,
+      "('retargeted', True)": 12
+    },
+    "high_load_throttle_dips": [
+      {
+        "capture": "drive-a",
+        "event": 17,
+        "shift": "1->2",
+        "request_s": 398.370378,
+        "completion_s": 399.30023,
+        "request_line": 238390,
+        "completion_line": 238947,
+        "min_line": 238764,
+        "first_b3_below100_delay_ms": 619.197,
+        "b2_values_during": [
+          208
+        ],
+        "b4_values_during": [
+          189,
+          190,
+          191,
+          192
+        ],
+        "b3_min": 68,
+        "b3_max": 208,
+        "min_b3_relative_equiv": 30.357319999999998,
+        "max_b3_relative_equiv": 92.65592
+      },
+      {
+        "capture": "drive-a",
+        "event": 18,
+        "shift": "2->3",
+        "request_s": 407.728771,
+        "completion_s": 408.578627,
+        "request_line": 243990,
+        "completion_line": 244499,
+        "min_line": 244322,
+        "first_b3_below100_delay_ms": 549.204,
+        "b2_values_during": [
+          208
+        ],
+        "b4_values_during": [
+          188,
+          189,
+          190
+        ],
+        "b3_min": 71,
+        "b3_max": 208,
+        "min_b3_relative_equiv": 31.69229,
+        "max_b3_relative_equiv": 92.65592
+      },
+      {
+        "capture": "into_town",
+        "event": 39,
+        "shift": "1->2",
+        "request_s": 473.503711,
+        "completion_s": 474.423556,
+        "request_line": 281836,
+        "completion_line": 282386,
+        "min_line": 282209,
+        "first_b3_below100_delay_ms": 619.418,
+        "b2_values_during": [
+          208
+        ],
+        "b4_values_during": [
+          189,
+          190,
+          191,
+          192
+        ],
+        "b3_min": 68,
+        "b3_max": 208,
+        "min_b3_relative_equiv": 30.357319999999998,
+        "max_b3_relative_equiv": 92.65592
+      }
+    ],
+    "throttle_update": "B2 stays high during three B3 intervention dips: do not label B2 as final actuator command; retain upstream demand/request-like candidate.",
+    "cruise_intervals": 6,
+    "cruise_seconds": 577.293461,
+    "cruise_response_ms": {
+      "CANCEL": {
+        "n": 4,
+        "min": 41.435,
+        "median": 44.724999999999994,
+        "max": 48.032
+      },
+      "RESUME": {
+        "n": 3,
+        "min": 159.224,
+        "median": 203.737,
+        "max": 215.433
+      },
+      "SET": {
+        "n": 3,
+        "min": 163.304,
+        "median": 178.024,
+        "max": 211.593
+      },
+      "brake": {
+        "n": 2,
+        "min": 20.0,
+        "median": 20.011499999999998,
+        "max": 20.023
+      }
+    },
+    "zero_request_5to4": {
+      "n": 7,
+      "speeds_kmh": [
+        51.99,
+        57.98,
+        51.98,
+        51.99,
+        51.92,
+        51.96,
+        51.96
+      ]
+    },
+    "coupling_reference": {
+      "training_capture": "drive-a",
+      "training_samples": 6019,
+      "training_seconds": 300.95,
+      "histogram_mode_rpm_per_kmh": 21.17500000000016,
+      "core_samples": 5335,
+      "core_seconds": 266.75,
+      "fifth_rpm_per_kmh": 21.176971373842715,
+      "fifth_rpm_per_mph": 34.08103181866553,
+      "coefficient": 37.41514377004014,
+      "reference_rpm_per_kmh": {
+        "1": 99.22496127814645,
+        "2": 56.758773099150886,
+        "3": 38.799504089531624,
+        "4": 27.612376102289623,
+        "5": 21.176971373842715
+      },
+      "core_ratio_p05": 21.132587694745688,
+      "core_ratio_p95": 21.217928244437346
+    },
+    "accessory": {
+      "edge_pairs": 43,
+      "by_capture": {
+        "drive-a": 4,
+        "standing": 39
+      },
+      "on_fuel_ticks_per_s": 4.166809719058475,
+      "off_fuel_ticks_per_s": 2.984586702766987,
+      "relative_increase_pct": 39.61094563597225,
+      "on_rpm_median": 805.5,
+      "off_rpm_median": 807.0,
+      "on_minus_off_b3_median": 3.0,
+      "pairs_with_fuel_increase_over_005": 37,
+      "causality": "Association, not isolated experiment or physical compressor verification; 39/43 edges from the same stationary checklist capture."
+    },
+    "fuel_counter_total": 25236,
+    "fuel": [
+      {
+        "category": "accelerating",
+        "raw_ticks": 12304,
+        "seconds": 288.1534,
+        "fuel_counter_pct": 48.75574576002536,
+        "time_pct": 20.585801942822265
+      },
+      {
+        "category": "engine_off_or_cranking",
+        "raw_ticks": 2,
+        "seconds": 8.198466,
+        "fuel_counter_pct": 0.007925186241876684,
+        "time_pct": 0.5857019119363586
+      },
+      {
+        "category": "slowing",
+        "raw_ticks": 1106,
+        "seconds": 255.357593,
+        "fuel_counter_pct": 4.382627991757806,
+        "time_pct": 18.242855486327137
+      },
+      {
+        "category": "steady_speed",
+        "raw_ticks": 11276,
+        "seconds": 704.181628,
+        "fuel_counter_pct": 44.682200031700745,
+        "time_pct": 50.30703620287718
+      },
+      {
+        "category": "stopped_running",
+        "raw_ticks": 548,
+        "seconds": 143.876582,
+        "fuel_counter_pct": 2.1715010302742113,
+        "time_pct": 10.278604456037055
+      }
+    ],
+    "caveats": [
+      "SpeedA remains nominal and not independently GPS-calibrated here.",
+      "Shift duration is a reported state interval, not a measured clutch torque-transfer interval.",
+      "No turbine/input-shaft speed, true pedal position, final throttle-actuator command or TCC command has been decoded.",
+      "Throttle calibration is used only for B3 in prior tested range 8..208; low idle values remain raw.",
+      "Fuel phase assignment uses +/-0.5s speed slope and threshold0.2m/s^2; sensitivity0.1..0.3 exported.",
+      "Fuel-accounting delay can shift attribution at category boundaries. No gallons or MPG estimated."
+    ]
+  }
+}

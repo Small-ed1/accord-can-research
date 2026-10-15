@@ -1,0 +1,219 @@
+{
+  "source_tag": "07-V05",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": [
+    {
+      "source_id": "0x12C",
+      "source_byte": 6,
+      "source_mask": 16,
+      "mirror_id": "0x405",
+      "mirror_byte": 0,
+      "mirror_mask": 1,
+      "relationship": "Boolean equality at each mirror-frame timestamp using the latest source frame",
+      "source_max_age_s": 0.2,
+      "mismatches": 0,
+      "valid": 7585,
+      "set_samples": 189,
+      "clear_samples": 7396,
+      "no_recent_source": 5,
+      "per_capture": [
+        {
+          "file": "drive-a",
+          "source": "12C.B6&10",
+          "mirror": "405.B0&01",
+          "valid": 2887,
+          "set_samples": 0,
+          "clear_samples": 2887,
+          "no_recent_source": 0
+        },
+        {
+          "file": "standing",
+          "source": "12C.B6&10",
+          "mirror": "405.B0&01",
+          "valid": 2474,
+          "set_samples": 162,
+          "clear_samples": 2312,
+          "no_recent_source": 3
+        },
+        {
+          "file": "drive-b",
+          "source": "12C.B6&10",
+          "mirror": "405.B0&01",
+          "valid": 1780,
+          "set_samples": 26,
+          "clear_samples": 1754,
+          "no_recent_source": 1
+        },
+        {
+          "file": "doors",
+          "source": "12C.B6&10",
+          "mirror": "405.B0&01",
+          "valid": 157,
+          "set_samples": 0,
+          "clear_samples": 157,
+          "no_recent_source": 0
+        },
+        {
+          "file": "startup",
+          "source": "12C.B6&10",
+          "mirror": "405.B0&01",
+          "valid": 42,
+          "set_samples": 1,
+          "clear_samples": 41,
+          "no_recent_source": 1
+        },
+        {
+          "file": "maxac",
+          "source": "12C.B6&10",
+          "mirror": "405.B0&01",
+          "valid": 245,
+          "set_samples": 0,
+          "clear_samples": 245,
+          "no_recent_source": 0
+        }
+      ]
+    },
+    {
+      "source_id": "0x1F4",
+      "source_byte": 0,
+      "source_mask": 2,
+      "mirror_id": "0x405",
+      "mirror_byte": 1,
+      "mirror_mask": 1,
+      "relationship": "Boolean equality at each mirror-frame timestamp using the latest source frame",
+      "source_max_age_s": 0.2,
+      "mismatches": 0,
+      "valid": 7590,
+      "set_samples": 40,
+      "clear_samples": 7550,
+      "no_recent_source": 0,
+      "per_capture": [
+        {
+          "file": "drive-a",
+          "source": "1F4.B0&02",
+          "mirror": "405.B1&01",
+          "valid": 2887,
+          "set_samples": 0,
+          "clear_samples": 2887,
+          "no_recent_source": 0
+        },
+        {
+          "file": "standing",
+          "source": "1F4.B0&02",
+          "mirror": "405.B1&01",
+          "valid": 2477,
+          "set_samples": 24,
+          "clear_samples": 2453,
+          "no_recent_source": 0
+        },
+        {
+          "file": "drive-b",
+          "source": "1F4.B0&02",
+          "mirror": "405.B1&01",
+          "valid": 1781,
+          "set_samples": 8,
+          "clear_samples": 1773,
+          "no_recent_source": 0
+        },
+        {
+          "file": "doors",
+          "source": "1F4.B0&02",
+          "mirror": "405.B1&01",
+          "valid": 157,
+          "set_samples": 0,
+          "clear_samples": 157,
+          "no_recent_source": 0
+        },
+        {
+          "file": "startup",
+          "source": "1F4.B0&02",
+          "mirror": "405.B1&01",
+          "valid": 43,
+          "set_samples": 8,
+          "clear_samples": 35,
+          "no_recent_source": 0
+        },
+        {
+          "file": "maxac",
+          "source": "1F4.B0&02",
+          "mirror": "405.B1&01",
+          "valid": 245,
+          "set_samples": 0,
+          "clear_samples": 245,
+          "no_recent_source": 0
+        }
+      ]
+    },
+    {
+      "source_id": "0x224",
+      "source_byte": 6,
+      "source_mask": 2,
+      "mirror_id": "0x405",
+      "mirror_byte": 3,
+      "mirror_mask": 1,
+      "relationship": "Boolean equality at each mirror-frame timestamp using the latest source frame",
+      "source_max_age_s": 0.2,
+      "mismatches": 0,
+      "valid": 7584,
+      "set_samples": 230,
+      "clear_samples": 7354,
+      "no_recent_source": 6,
+      "per_capture": [
+        {
+          "file": "drive-a",
+          "source": "224.B6&02",
+          "mirror": "405.B3&01",
+          "valid": 2887,
+          "set_samples": 0,
+          "clear_samples": 2887,
+          "no_recent_source": 0
+        },
+        {
+          "file": "standing",
+          "source": "224.B6&02",
+          "mirror": "405.B3&01",
+          "valid": 2473,
+          "set_samples": 201,
+          "clear_samples": 2272,
+          "no_recent_source": 4
+        },
+        {
+          "file": "drive-b",
+          "source": "224.B6&02",
+          "mirror": "405.B3&01",
+          "valid": 1780,
+          "set_samples": 27,
+          "clear_samples": 1753,
+          "no_recent_source": 1
+        },
+        {
+          "file": "doors",
+          "source": "224.B6&02",
+          "mirror": "405.B3&01",
+          "valid": 157,
+          "set_samples": 0,
+          "clear_samples": 157,
+          "no_recent_source": 0
+        },
+        {
+          "file": "startup",
+          "source": "224.B6&02",
+          "mirror": "405.B3&01",
+          "valid": 42,
+          "set_samples": 2,
+          "clear_samples": 40,
+          "no_recent_source": 1
+        },
+        {
+          "file": "maxac",
+          "source": "224.B6&02",
+          "mirror": "405.B3&01",
+          "valid": 245,
+          "set_samples": 0,
+          "clear_samples": 245,
+          "no_recent_source": 0
+        }
+      ]
+    }
+  ]
+}

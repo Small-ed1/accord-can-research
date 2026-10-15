@@ -1,0 +1,23 @@
+{
+  "scope": "Fresh integer delta recount of two continuous recovered drives; no absolute odometer or initial accumulator value exported. This checks count conventions, not fuel volume or GPS distance.",
+  "recordings": {
+    "drive-a": {
+      "fine_ticks": 1681,
+      "fuel_raw_increments": 15236,
+      "fuel_normalized_increments": 7618,
+      "odd_fuel_raw_frames": 0,
+      "largest_fine_delta": 1,
+      "largest_fuel_delta": 18,
+      "time_gaps_over_half_second": 0
+    },
+    "drive-b": {
+      "fine_ticks": 856,
+      "fuel_raw_increments": 10000,
+      "fuel_normalized_increments": 5000,
+      "odd_fuel_raw_frames": 0,
+      "largest_fine_delta": 1,
+      "largest_fuel_delta": 16,
+      "time_gaps_over_half_second": 0
+    }
+  }
+}

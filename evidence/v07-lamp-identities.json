@@ -1,0 +1,81 @@
+{
+  "source_tag": "07-V07",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": [
+    {
+      "name": "mil_warning_lamp",
+      "can_id": "12C",
+      "byte": 6,
+      "mask": "10",
+      "mirrors": [
+        {
+          "can_id": "405",
+          "byte": 0,
+          "mask": "01"
+        }
+      ],
+      "meaning": "Malfunction Indicator Lamp (check-engine) command/status",
+      "confidence": "high",
+      "caveat": "On this vehicle it timed out after ~20 seconds KOEO; lamp off does not prove absence of DTCs."
+    },
+    {
+      "name": "abs_warning_lamp",
+      "can_id": "1F4",
+      "byte": 0,
+      "mask": "02",
+      "mirrors": [
+        {
+          "can_id": "405",
+          "byte": 1,
+          "mask": "01"
+        }
+      ],
+      "meaning": "ABS warning lamp / startup self-test state",
+      "confidence": "high",
+      "caveat": "Seen during normal ~2.15s lamp test only; ABS fault-present behavior not independently exercised."
+    },
+    {
+      "name": "charging_warning_lamp",
+      "can_id": "224",
+      "byte": 6,
+      "mask": "02",
+      "mirrors": [
+        {
+          "can_id": "405",
+          "byte": 3,
+          "mask": "01"
+        }
+      ],
+      "meaning": "Battery / charging-system warning indicator",
+      "confidence": "high",
+      "caveat": "Lamp status, NOT actual alternator voltage or charging-health certification."
+    },
+    {
+      "name": "low_oil_pressure_warning_lamp",
+      "can_id": "0D4",
+      "byte": 2,
+      "mask": "80",
+      "mirrors": [
+        {
+          "can_id": "405",
+          "byte": 2,
+          "mask": "80",
+          "note": "Delayed on some starts; 6 mismatches/8810 source-fresh comparisons in 9 logs"
+        }
+      ],
+      "meaning": "Low engine oil-pressure warning indicator",
+      "confidence": "high",
+      "caveat": "Boolean warning; NOT measured oil pressure in kPa or PSI; use faster 0D4 as primary."
+    },
+    {
+      "name": "drive_indicator_lamp",
+      "can_id": "188",
+      "byte": 2,
+      "mask": "80",
+      "mirrors": [],
+      "meaning": "Green D lamp/Drive-range confirmation including bulb-check at key ON",
+      "confidence": "high",
+      "caveat": "Can assert for ~2.0s in Park during startup; DO NOT equate solely with selector=D or engaged drive."
+    }
+  ]
+}

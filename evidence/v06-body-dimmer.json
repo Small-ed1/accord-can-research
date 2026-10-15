@@ -1,0 +1,154 @@
+{
+  "source_tag": "07-V06",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": [
+    {
+      "name": "trunk_open",
+      "id": "0x405",
+      "byte": 5,
+      "mask": "0x02",
+      "expression": "bool(B5 & 0x02)",
+      "set_means": "trunk open",
+      "clear_means": "trunk closed",
+      "confidence": "high, vehicle-action-correlated in two open/close cycles",
+      "new_vs_v05": true,
+      "events": [
+        {
+          "t": 0.226339,
+          "line": 139,
+          "value": 0,
+          "raw": 0
+        },
+        {
+          "t": 16.425669,
+          "line": 9832,
+          "value": 2,
+          "raw": 2
+        },
+        {
+          "t": 25.726172,
+          "line": 15401,
+          "value": 0,
+          "raw": 0
+        },
+        {
+          "t": 32.625156,
+          "line": 19530,
+          "value": 2,
+          "raw": 2
+        },
+        {
+          "t": 40.124704,
+          "line": 24017,
+          "value": 0,
+          "raw": 0
+        }
+      ],
+      "notes": [
+        "Byte numbering zero-based.",
+        "Module origin not established.",
+        "Freshness-gate received state; missing frames do not mean closed.",
+        "The direct transitions were aligned to the user's ordered actions, not independent switch timestamps."
+      ]
+    },
+    {
+      "name": "driver_seatbelt_unbuckled_status",
+      "id": "0x405",
+      "byte": 2,
+      "mask": "0x04",
+      "expression": "bool(B2 & 0x04)",
+      "set_means": "unbuckled, as observed in this parked capture",
+      "clear_means": "buckled, as explicitly reported for the start of this capture",
+      "confidence": "high for observed polarity; identity already established in earlier tests",
+      "new_vs_v05": "polarity resolution, not a new field",
+      "events": [
+        {
+          "t": 0.226339,
+          "line": 139,
+          "value": 0,
+          "raw": 0
+        },
+        {
+          "t": 8.626021,
+          "line": 5165,
+          "value": 4,
+          "raw": 4
+        }
+      ],
+      "notes": [
+        "No evidence here distinguishing raw buckle switch from ECU-derived seatbelt warning/status.",
+        "Do not claim every warning/chime behavior is decoded."
+      ]
+    },
+    {
+      "name": "dimmer_level_code",
+      "id": "0x1F4",
+      "byte": 1,
+      "mask": "0x7F",
+      "expression": "B1 & 0x7F",
+      "confidence": "strong working interpretation, raw code not calibrated photometric percentage",
+      "new_vs_v05": "expanded observed range and candidate field split",
+      "observed_plateaus": [
+        {
+          "phase": "lights off",
+          "raw": 100,
+          "low7": 100
+        },
+        {
+          "phase": "lights on, pre-sweep setting",
+          "raw": 77,
+          "low7": 77
+        },
+        {
+          "phase": "minimum position per ordered sweep",
+          "raw": 24,
+          "low7": 24
+        },
+        {
+          "phase": "middle position per ordered sweep",
+          "raw": 48,
+          "low7": 48
+        },
+        {
+          "phase": "maximum position per ordered sweep",
+          "raw": 228,
+          "low7": 100
+        }
+      ],
+      "notes": [
+        "Do not scale the full byte as 0..255 brightness.",
+        "24 is an observed minimum in this test, not a universal endpoint.",
+        "Bit split is supported by raw E4 = 80 | 64; interpretation remains provisional."
+      ]
+    },
+    {
+      "name": "dimmer_maximum_override_candidate",
+      "id": "0x1F4",
+      "byte": 1,
+      "mask": "0x80",
+      "expression": "bool(B1 & 0x80)",
+      "confidence": "candidate",
+      "new_vs_v05": true,
+      "events": [
+        {
+          "t": 0.025898,
+          "line": 18,
+          "value": 0,
+          "raw": 100
+        },
+        {
+          "t": 255.138398,
+          "line": 152687,
+          "value": 128,
+          "raw": 228
+        }
+      ],
+      "notes": [
+        "Set at the final reported maximum-brightness position only.",
+        "Remains set through capture end; no return transition observed.",
+        "Not proven whether this denotes a detent, override request, or another related illumination state.",
+        "Retain as candidate; do not classify as fully decoded or hide indiscriminately."
+      ]
+    }
+  ]
+}

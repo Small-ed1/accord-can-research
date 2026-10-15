@@ -1,0 +1,157 @@
+[
+  {
+    "source_tag": "03-V1",
+    "public_path": "archive/2003/v1-baseline.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "03-V2",
+    "public_path": "archive/2003/v2-baseline-followup.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "03-V3",
+    "public_path": "archive/2003/v3-labeled-findings.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V01",
+    "public_path": "archive/2007/v01-baseline.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V02",
+    "public_path": "archive/2007/v02-standing.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V03",
+    "public_path": "archive/2007/v03-labeled-controls.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V04",
+    "public_path": "archive/2007/v04-followups.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V05",
+    "public_path": "archive/2007/v05-residual-audit.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V06",
+    "public_path": "archive/2007/v06-body-dimmer.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V07",
+    "public_path": "archive/2007/v07-lamp-identities.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V08",
+    "public_path": "archive/2007/v08-throttle-reference.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V09",
+    "public_path": "archive/2007/v09-focused-fuel-field.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V10",
+    "public_path": "archive/2007/v10-focused-comparison.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V11",
+    "public_path": "archive/2007/v11-fuel-cut.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V12",
+    "public_path": "archive/2007/v12-dynamics.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-REGISTER",
+    "public_path": "archive/2007/remaining-register-before-v13.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "07-V13",
+    "public_path": "archive/2007/v13-followthrough.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "COMPARE-EARLY",
+    "public_path": "archive/early-cross-year-comparison.md",
+    "type": "sanitized historical narrative",
+    "precedence": "Current year-specific docs/maps override earlier interpretations."
+  },
+  {
+    "source_tag": "03-MAP",
+    "public_path": "archive/2003/workbook/all-sheets.json",
+    "type": "all nine original workbook sheets, text only",
+    "original_signal_rows": 46,
+    "precedence": "Historical; use current maps for extraction and confidence."
+  },
+  {
+    "source_tag": "07-V13",
+    "public_path": "evidence/v13-computed-evidence.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V08",
+    "public_path": "evidence/v08-throttle-calibration.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V07",
+    "public_path": "evidence/v07-lamp-identities.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V06",
+    "public_path": "evidence/v06-body-dimmer.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V05",
+    "public_path": "evidence/v05-historical-mirrors.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V11",
+    "public_path": "evidence/v11-fuel-cut-summary.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V12",
+    "public_path": "evidence/v12-throttle-shift-findings.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  },
+  {
+    "source_tag": "07-V12",
+    "public_path": "evidence/v12-dynamics-summary.json",
+    "type": "selected sanitized aggregate/reference evidence"
+  }
+]

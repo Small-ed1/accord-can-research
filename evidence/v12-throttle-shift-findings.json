@@ -1,0 +1,77 @@
+{
+  "source_tag": "07-V12",
+  "status": "Reported research result, privacy-edited; later corrections take precedence. Not all calculations were rerun in publication preparation.",
+  "data": [
+    {
+      "capture": "drive-a",
+      "event": 17,
+      "shift": "1->2",
+      "request_s": 398.370378,
+      "completion_s": 399.30023,
+      "request_line": 238390,
+      "completion_line": 238947,
+      "min_line": 238764,
+      "first_b3_below100_delay_ms": 619.197,
+      "b2_values_during": [
+        208
+      ],
+      "b4_values_during": [
+        189,
+        190,
+        191,
+        192
+      ],
+      "b3_min": 68,
+      "b3_max": 208,
+      "min_b3_relative_equiv": 30.357319999999998,
+      "max_b3_relative_equiv": 92.65592
+    },
+    {
+      "capture": "drive-a",
+      "event": 18,
+      "shift": "2->3",
+      "request_s": 407.728771,
+      "completion_s": 408.578627,
+      "request_line": 243990,
+      "completion_line": 244499,
+      "min_line": 244322,
+      "first_b3_below100_delay_ms": 549.204,
+      "b2_values_during": [
+        208
+      ],
+      "b4_values_during": [
+        188,
+        189,
+        190
+      ],
+      "b3_min": 71,
+      "b3_max": 208,
+      "min_b3_relative_equiv": 31.69229,
+      "max_b3_relative_equiv": 92.65592
+    },
+    {
+      "capture": "into_town",
+      "event": 39,
+      "shift": "1->2",
+      "request_s": 473.503711,
+      "completion_s": 474.423556,
+      "request_line": 281836,
+      "completion_line": 282386,
+      "min_line": 282209,
+      "first_b3_below100_delay_ms": 619.418,
+      "b2_values_during": [
+        208
+      ],
+      "b4_values_during": [
+        189,
+        190,
+        191,
+        192
+      ],
+      "b3_min": 68,
+      "b3_max": 208,
+      "min_b3_relative_equiv": 30.357319999999998,
+      "max_b3_relative_equiv": 92.65592
+    }
+  ]
+}

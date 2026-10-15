@@ -1,0 +1,7 @@
+CAN ID,Rate Hz,B0,B1,B2,B3,B4,B5,B6,B7,Message-Level Notes
+0x0C8,100,00 reserved,00 reserved,00 reserved,00 reserved,Speed high,Speed low,Distance ticks,Counter bits7:6; rest 0,"Primary motion message. Native speed = BE16(B4,B5)/100 km/h."
+0x0D4,100,bits1:0 lights; bit2 park brake,E0 constant,bit6 A/C; bit7 oil/engine-off candidate,Fuel gauge angle,Fuel sender ADC/voltage,Secondary speed high,Secondary speed low,Counter + checksum,Meter-originated. Fuel level needs filtering due slosh.
+0x12C,100,Coolant +40,IAT +40,00 reserved,00 reserved,RPM high,RPM low,bit0 brake; bit4 MIL,Counter + checksum,"Engine message. RPM is direct, no /4."
+0x188,100,Current gear,Target gear,bit7 D-range confirmed,Selector position,00 reserved,00 reserved,0E constant,Counter + checksum,"Transmission state. B0 code7=shifting, B3 gives full physical lever detent."
+0x1F4,25,Wiper + turn packed byte,Likely dimmer? unresolved,Rare transient; normally 00,Odometer km high,Odometer km mid,Odometer km low,00 reserved,Counter bits7:6; rest 0,Meter status. Mist/hazards/intermittent-delay limitations apply.
+0x224,10,00 reserved,Slow unknown F3–F6,Fuel accumulator high,Fuel accumulator low,00 reserved,00 reserved,E0 base + bit1 charge-light candidate,Counter + checksum,Engine fuel-use message. Fuel accumulator functional identity confirmed; physical scale configurable.

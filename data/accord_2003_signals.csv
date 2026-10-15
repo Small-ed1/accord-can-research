@@ -1,0 +1,67 @@
+year,can_id,name,byte,bit,width,byte_order,scale,offset,unit,confidence,source,notes,choices,kind
+2003,0x0C8,Raw_B0,0,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0C8,Raw_B1,1,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0C8,Raw_B2,2,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0C8,Raw_B3,3,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0C8,SpeedB,4,0,16,big,0.01,0,km/h nominal,high,03-V3,2003 primary nominal speed. On 2007 about 2.06% higher than A; not an independent wheel speed. 2003 OBD-equivalent empirical alternative raw*0.0098.,{},signal
+2003,0x0C8,DistanceTicksRaw,6,0,8,little,1,0,tick,high,03-V3,Modulo 256. Approximate historical 10 m/tick. Do not import 2007 calibration automatically.,{},signal
+2003,0x0C8,Raw_B7_bits0_5,7,0,6,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0C8,RollingCounter,7,6,2,little,1,0,count,protocol-validated,03-V3,Modulo 4 per identifier; discontinuity is not an exact loss count.,{},protocol
+2003,0x0D4,LightingMode,0,0,2,little,1,0,code,high,03-V3,"Reported mode, not measured lamp current. DRL output is not decoded by this enum.","{""0"": ""off"", ""1"": ""parking"", ""2"": ""low beam"", ""3"": ""high beam or flash""}",signal
+2003,0x0D4,ParkingBrake,0,2,1,little,1,0,bool,high,03-V3,Set=applied switch/status; not holding force.,{},signal
+2003,0x0D4,Raw_B0_bits3_7,0,3,5,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0D4,Raw_B1,1,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0D4,Raw_B2_bits0_5,2,0,6,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0D4,AccessoryControlCandidate,2,6,1,little,1,0,bool,experimental,03-V3,"2003 A/C-correlated behavior. 2007 asserts with fresh zero RPM for long intervals; not proof of compressor rotation, mechanical load or physical clutch engagement.",{},signal
+2003,0x0D4,OilWarningCandidate,2,7,1,little,1,0,bool,candidate,03-MAP,"2003 lifecycle-based candidate; 2007 lamp-identified. Boolean status only, never oil pressure in physical units.",{},signal
+2003,0x0D4,FuelSenderRelatedB3,3,0,8,little,1,0,raw,high-related-raw,03-V3,Sender-related channel; angle-like interpretation historical on 2003. No confirmed tank percentage or gallons. 2007 output changes on approximately 200 ms grid.,{},signal
+2003,0x0D4,FuelSenderRelatedB4,4,0,8,little,1,0,raw,high-related-raw,03-V3,"Related inversely to B3. Historical 2003 5/255 V scaling is an approximation, not a direct voltmeter calibration; retain raw.",{},signal
+2003,0x0D4,SecondarySpeedRaw,5,0,16,big,1,0,raw,high-related-raw,03-V3,Filtered/smoothed speed-related field. Nominal raw/100 convention; fitted offsets are invalid near standstill. Not a separately decoded wheel speed.,{},signal
+2003,0x0D4,NibbleChecksum,7,0,4,little,1,0,nibble,protocol-validated,03-V3,Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.,{},protocol
+2003,0x0D4,Raw_B7_bits4_5,7,4,2,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x0D4,RollingCounter,7,6,2,little,1,0,count,protocol-validated,03-V3,Modulo 4 per identifier; discontinuity is not an exact loss count.,{},protocol
+2003,0x12C,CoolantTemperature,0,0,8,little,1,-40,degC,obd-validated,03-V2,2003 independently OBD compared; 2007 prior mapping supported by traces. Frame frequency is not independent sensor update frequency.,{},signal
+2003,0x12C,IntakeAirTemperature,1,0,8,little,1,-40,degC approx,obd-validated,03-V2,2003 all 93 comparisons within 1 C. Formula is approximate.,{},signal
+2003,0x12C,Raw_B2,2,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x12C,Raw_B3,3,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x12C,EngineRPM,4,0,16,big,1,0,rpm,obd-validated,03-V2,BE16 directly in rpm. Do not use the generic OBD divide-by-four rule.,{},signal
+2003,0x12C,ServiceBrake,6,0,1,little,1,0,bool,high,03-V3,Set=service brake switch/status asserted; no brake pressure measurement.,{},signal
+2003,0x12C,Raw_B6_bits1_3,6,1,3,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x12C,MILStatus,6,4,1,little,1,0,bool,strong-inference,03-MAP,Lamp command/status only. Off does not establish no pending/stored DTC. On 2007 can time out after about 20 s with engine stopped.,{},signal
+2003,0x12C,Raw_B6_bits5_7,6,5,3,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x12C,NibbleChecksum,7,0,4,little,1,0,nibble,protocol-validated,03-V3,Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.,{},protocol
+2003,0x12C,Raw_B7_bits4_5,7,4,2,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x12C,RollingCounter,7,6,2,little,1,0,count,protocol-validated,03-V3,Modulo 4 per identifier; discontinuity is not an exact loss count.,{},protocol
+2003,0x188,ReportedGear,0,0,8,little,1,0,code,high,03-V3,Keep selector and target alongside this field. Code 7 may persist during Reverse engagement; it is not seventh gear.,"{""0"": ""Park or Neutral status; use selector"", ""1"": ""1st"", ""2"": ""2nd"", ""3"": ""3rd"", ""4"": ""4th"", ""5"": ""5th"", ""6"": ""Settled Reverse"", ""7"": ""Transition or unsettled status, not seventh gear""}",signal
+2003,0x188,TargetGear,1,0,8,little,1,0,code,high,03-V3,Requested/reported target; a change is not proof of physical clutch transfer completion.,"{""0"": ""Park or Neutral status; use selector"", ""1"": ""1st"", ""2"": ""2nd"", ""3"": ""3rd"", ""4"": ""4th"", ""5"": ""5th"", ""6"": ""Settled Reverse""}",signal
+2003,0x188,Raw_B2_bits0_6,2,0,7,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x188,DRangeCandidate,2,7,1,little,1,0,bool,candidate,03-V3,2003 D-associated candidate; 2007 green D lamp including startup bulb-check in Park. Not TCC lockup or shift-interlock feedback.,{},signal
+2003,0x188,SelectorCode,3,0,8,little,1,0,code,high,03-V3,Raw one-hot-like selector codes. No 0x10 position established. Unknown code is not Park.,"{""0"": ""Between positions or unknown"", ""1"": ""P"", ""2"": ""R"", ""4"": ""N"", ""8"": ""D"", ""32"": ""D3"", ""64"": ""2"", ""128"": ""1""}",signal
+2003,0x188,Raw_B4,4,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x188,Raw_B5,5,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x188,Raw_B6,6,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x188,NibbleChecksum,7,0,4,little,1,0,nibble,protocol-validated,03-V3,Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.,{},protocol
+2003,0x188,Raw_B7_bits4_5,7,4,2,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x188,RollingCounter,7,6,2,little,1,0,count,protocol-validated,03-V3,Modulo 4 per identifier; discontinuity is not an exact loss count.,{},protocol
+2003,0x1F4,Raw_B0_bits0_2,0,0,3,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x1F4,WiperMode,0,3,2,little,1,0,code,high,03-V3,"2003 manual-up shares high state. Mist, washer and intermittent delay are not independently decoded.","{""0"": ""off"", ""1"": ""intermittent"", ""2"": ""low"", ""3"": ""high or manual-up""}",signal
+2003,0x1F4,LeftTurnRequest,0,5,1,little,1,0,bool,high,03-V3,"Request/state, not actual lamp flash phase. A hazard encoding is not established.",{},signal
+2003,0x1F4,RightTurnRequest,0,6,1,little,1,0,bool,high,03-V3,"Request/state, not actual lamp flash phase. Do not manufacture hazards by OR-ing turn bits.",{},signal
+2003,0x1F4,Raw_B0_bits7_7,0,7,1,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x1F4,DimmerRaw,1,0,8,little,1,0,raw,working-interpretation,03-PATCH,Later decoder implements ordinary range 0..99 with special 0xE4 full-bright handling. Not calibrated optical brightness; keep raw.,{},signal
+2003,0x1F4,UnidentifiedB2,2,0,8,little,1,0,raw,unknown,03-V3,2003 one 0x04 transient; 2007 zero in examined recordings. Constancy is not proof of unused/reserved.,{},raw
+2003,0x1F4,OdometerRaw,3,0,24,big,1,0,raw odometer count,maintainer-confirmed-scale,03-ODO,Derived miles=raw/1.61 by later dashboard comparison. DBC retains raw to distinguish this from true SI kilometers. Absolute readings intentionally withheld.,{},signal
+2003,0x1F4,Raw_B6,6,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x1F4,Raw_B7_bits0_5,7,0,6,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x1F4,RollingCounter,7,6,2,little,1,0,count,protocol-validated,03-V3,Modulo 4 per identifier; discontinuity is not an exact loss count.,{},protocol
+2003,0x224,Raw_B0,0,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x224,UnidentifiedB1,1,0,8,little,1,0,raw,unknown,03-V3,03 observed F3..F6; 07 F3..F5. Slow-changing raw field; direct LTFT/MAP/ECT/fuel-level/count identities unsupported.,{},raw
+2003,0x224,FuelAccumulatorRaw,2,0,16,big,1,0,raw fuel tick,high,03-V3,"Even BE16 raw values; normalized=raw>>1. Raw modulo65536, normalized modulo32768. Reset/gap-aware increments only. Volume factor configurable and not an OEM scale.",{},signal
+2003,0x224,Raw_B4,4,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x224,Raw_B5,5,0,8,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x224,Raw_B6_bits0_0,6,0,1,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x224,ChargingWarningCandidate,6,1,1,little,1,0,bool,candidate,03-MAP,2003 charging-system candidate; 2007 battery lamp identified. Not measured voltage or charging-health certification.,{},signal
+2003,0x224,Raw_B6_bits2_7,6,2,6,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x224,NibbleChecksum,7,0,4,little,1,0,nibble,protocol-validated,03-V3,Payload nibble-sum checksum; no identifier contribution. Validate outside DBC.,{},protocol
+2003,0x224,Raw_B7_bits4_5,7,4,2,little,1,0,raw,unknown-or-unexcited,03-MAP,Unmapped region retained verbatim. May be constant or an unexercised feature; not manufacturer-reserved by inference.,{},raw
+2003,0x224,RollingCounter,7,6,2,little,1,0,count,protocol-validated,03-V3,Modulo 4 per identifier; discontinuity is not an exact loss count.,{},protocol
