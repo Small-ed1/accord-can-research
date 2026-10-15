@@ -15,6 +15,8 @@ local-inputs/
 *.jpg
 *.jpeg
 *.png
+# Generated publication artwork only; original source images remain excluded.
+!docs/assets/social-preview.png
 *.heic
 *.xlsx
 .env

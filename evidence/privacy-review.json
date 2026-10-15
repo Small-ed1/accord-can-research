@@ -54,5 +54,23 @@
     "release_scope": "Original v0.1.0 tag and asset bytes retained; current main receives public-publication notices and an updated manifest.",
     "distribution": "Public visibility authorized by maintainer. No reuse license applied; scientific limitations and private-source exclusions retained.",
     "limitations": "Known-pattern checks of history and logs supplement document review; they cannot detect all secrets or guarantee anonymity. Original private sources were unavailable for a new source-specific comparison."
+  },
+  "discovery_materials_review": {
+    "date": "2026-10-15",
+    "generated_assets": [
+      "docs/assets/accord-can-overview.svg",
+      "docs/assets/social-preview.png"
+    ],
+    "png_dimensions": [
+      1280,
+      640
+    ],
+    "png_size_bytes": 116054,
+    "png_metadata": {},
+    "source": "Native SVG design rendered locally. The only payload is the documented synthetic decoder example, not captured vehicle data.",
+    "image_exclusion": "Only the exact generated PNG path is allowlisted. Raw vehicle images and recordings remain excluded.",
+    "announcement_scope": "Drafts request independent validation, retain sample and license limits, and ask for anonymous summaries. No external forum submission is recorded by these files.",
+    "current_tracked_publication_files": 90,
+    "research_definitions_changed": false
   }
 }

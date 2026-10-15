@@ -16,6 +16,8 @@ Raw `1F4` odometer examples and observed values in its B3:B5 byte-audit slots ar
 
 Relative event intervals, aggregate counts, regression coefficients, controlled stationary OBD pairs, generic status transitions, raw sender/throttle ranges and uncertainty notes remain. These support the technical findings without supplying complete trip traces. The 2003/2007 sample pairing and distinctive research can still be recognizable to someone already familiar with the project. Public account identity, contributor identity and future commits can also create links. This is a reviewed, privacy-reduced publication, not a guarantee of irreversible anonymity.
 
+The repository overview SVG and social-preview PNG are generated publication artwork. Their byte example is the same synthetic frame used in the decoder documentation, not source media or a trip recording. Only `docs/assets/social-preview.png` is exempted from the image-file exclusion; original photographs and screenshots remain excluded.
+
 ## Review method
 
 The release was built into a new directory rather than cleaning an existing Git history. Archive members were inspected/selected before copying. The publication scan checks for local paths, user identifiers, private URLs/file IDs, capture epochs and timestamps, raw odometer examples, unexpected media/binaries and known source-specific strings. Human review of the curated documents supplements pattern matching. The original raw inputs stay outside the release directory and ZIP.

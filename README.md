@@ -11,6 +11,16 @@ This repository documents the CAN signals recovered while developing CarStats on
 
 These are observations from one 2003 and one 2007 research vehicle. They are **not a Honda OEM DBC, a complete vehicle-network specification, or a claim that every Accord of either year uses these messages.** Extra IDs seen in the 2007 sample are not proven exclusive to that model year.
 
+![Accord CAN Research: year-specific maps and offline tools for two observed vehicles, with a synthetic 3000 RPM decode example](docs/assets/accord-can-overview.svg)
+
+**Download the research DBCs:** [2003 profile](https://github.com/Small-ed1/accord-can-research/releases/download/v0.1.0/accord_2003_research.dbc) · [2007 profile](https://github.com/Small-ed1/accord-can-research/releases/download/v0.1.0/accord_2007_research.dbc) · [release notes and source](https://github.com/Small-ed1/accord-can-research/releases/tag/v0.1.0).
+
+### Help validate the findings
+
+Independent confirmations and counterexamples from another vehicle would help establish where these profiles apply. The highest-priority 2007 questions are an independent diagnostic reference for `0x224 B1`, a metered reference for fuel-counter volume, and a synchronized accessory/clutch-control reference. Generic year, engine, transmission and market context plus the field, independent reference and counterexamples are enough to start a [signal-finding issue](https://github.com/Small-ed1/accord-can-research/issues/new?template=signal-finding.md).
+
+Share privacy-reviewed summaries rather than raw trip logs or identifying vehicle readings. See the [2007 checklist](https://github.com/Small-ed1/accord-can-research/issues/1), [separate 2003 checklist](https://github.com/Small-ed1/accord-can-research/issues/2) and [contribution guide](CONTRIBUTING.md). To introduce this work to a community, use the [sharing guide and announcement drafts](docs/sharing.md).
+
 ### Start here
 
 | Question | Document |
@@ -53,6 +63,8 @@ python tools/accord_can.py decode --year 2007 --id 12C --data 805A00000BB810CE
 ```
 
 The decode example is synthetic. The tools open local files only and contain no vehicle-transmit path. DBCs expose locations and linear transforms; they do not enforce checksums, freshness, counter continuity, calibration confidence or safe display behavior.
+
+For that example, `0x12C B4:B5 = 0B B8`, and `0x0BB8 = 3000`: the tool returns `"EngineRPM": 3000` without an OBD-style division by four. This demonstrates the offline decoder; it is not a captured vehicle sample.
 
 For third-party DBC qualification, create a virtual environment, install `requirements-dev.txt`, and run the same suite with that environment's Python. GitHub Actions runs both the standard-library suite and cantools qualification on Python 3.10 and 3.14, and verifies the release manifest. See [verification](docs/verification.md) for commands and scope.
 

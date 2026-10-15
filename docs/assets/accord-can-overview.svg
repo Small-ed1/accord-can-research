@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title description">
+  <title id="title">Accord CAN Research for 2003 and 2007 Honda Accord four-cylinder automatics</title>
+  <desc id="description">Evidence, year-specific DBC maps and offline tools. A synthetic 0x12C frame illustrates big-endian engine RPM: bytes 0B B8 equal 3000 RPM. Independent validation is welcome; these are research profiles from two observed vehicles.</desc>
+  <rect width="1280" height="640" fill="#0b1420"/>
+  <path d="M0 606H1280M1000 0V640M1120 0V640M0 88H1280" stroke="#162737" stroke-width="1"/>
+  <rect x="64" y="60" width="8" height="24" rx="3" fill="#53d9c4"/>
+  <text x="88" y="80" font-family="DejaVu Sans, sans-serif" font-size="20" letter-spacing="3" fill="#b4c5d3">PASSIVE OBSERVATION · OFFLINE ANALYSIS</text>
+  <text x="60" y="180" font-family="DejaVu Sans, sans-serif" font-size="68" font-weight="700" fill="#f0f5f9">Accord CAN</text>
+  <text x="60" y="260" font-family="DejaVu Sans, sans-serif" font-size="68" font-weight="700" fill="#f0f5f9">Research</text>
+  <text x="64" y="318" font-family="DejaVu Sans, sans-serif" font-size="28" fill="#53d9c4">2003 + 2007 Honda Accord</text>
+  <text x="64" y="357" font-family="DejaVu Sans, sans-serif" font-size="24" fill="#b4c5d3">Four-cylinder automatics · two observed vehicles</text>
+  <text x="64" y="422" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#f0f5f9">Year-specific DBCs · JSON / CSV maps</text>
+  <text x="64" y="458" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#b4c5d3">Evidence, corrections and unresolved questions</text>
+  <rect x="788" y="126" width="428" height="354" rx="18" fill="#122232" stroke="#2b465a"/>
+  <text x="816" y="167" font-family="DejaVu Sans Mono, monospace" font-size="18" fill="#b4c5d3">0x12C / SYNTHETIC FRAME</text>
+  <text x="816" y="211" font-family="DejaVu Sans Mono, monospace" font-size="24" fill="#b4c5d3">80 5A 00 00</text>
+  <rect x="806" y="227" width="160" height="43" rx="6" fill="#1e4d4b"/>
+  <text x="816" y="257" font-family="DejaVu Sans Mono, monospace" font-size="24" fill="#53d9c4">0B B8</text>
+  <text x="978" y="257" font-family="DejaVu Sans Mono, monospace" font-size="24" fill="#b4c5d3">10 CE</text>
+  <path d="M816 291H1188" stroke="#2b465a"/>
+  <text x="816" y="327" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#b4c5d3">B4:B5 · big-endian integer</text>
+  <text x="812" y="405" font-family="DejaVu Sans, sans-serif" font-size="62" font-weight="700" fill="#f0f5f9">3000</text>
+  <text x="1018" y="405" font-family="DejaVu Sans, sans-serif" font-size="26" fill="#53d9c4">RPM</text>
+  <text x="816" y="447" font-family="DejaVu Sans, sans-serif" font-size="18" fill="#b4c5d3">Illustration only; not a trip recording</text>
+  <path d="M64 510H1216" stroke="#2b465a"/>
+  <text x="64" y="552" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" fill="#f0f5f9">Looking for independent validation</text>
+  <text x="64" y="590" font-family="DejaVu Sans Mono, monospace" font-size="20" fill="#b4c5d3">github.com/Small-ed1/accord-can-research</text>
+</svg>

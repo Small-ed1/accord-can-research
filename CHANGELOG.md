@@ -1,5 +1,9 @@
 # Changelog
 
+## Discovery and independent validation — 15 October 2026
+
+Added a generated visual introduction, direct DBC release downloads, an explicit independent-validation request, and technical/owner-community announcement drafts. Expanded relevant GitHub topics. The graphic uses a synthetic RPM frame and adds no source vehicle imagery. A single generated PNG is allowlisted for social preview; original images remain excluded. Research definitions, runtime tools and the original release assets are unchanged.
+
 ## Public publication — 15 October 2026
 
 Reviewed reachable Git history, commit identities, release files, issue text and validation results before making the repository public. Updated the README and publishing notices for public access, retained the existing unlicensed status and research confidence limits, and refreshed the current manifest. The original `v0.1.0` tag and its verified assets remain unchanged.
